@@ -123,8 +123,22 @@
   .use { display: block; color: var(--muted); font-size: 0.82rem; margin-top: 2px; }
   #provTable td:first-child { white-space: nowrap; padding-right: 14px; }
 </style>
+<!--sitenav-style-->
+<style>
+.sitenav{max-width:1000px;margin:0 auto;padding:12px 16px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.88rem;line-height:1.2}
+.sitenav a{color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:0 12px;min-height:36px;display:inline-flex;align-items:center}
+.sitenav a:hover{border-color:var(--muted)}
+.sitenav a:focus-visible{outline:2px solid var(--muted);outline-offset:2px}
+.sitenav a[aria-current="page"]{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:600}
+.sitenav .sn-label{color:var(--muted);font-weight:600;margin-right:4px}
+.sitenav a.sn-back{color:var(--muted);border-style:dashed}
+</style>
+<!--/sitenav-style-->
 </head>
 <body>
+<!--sitenav-->
+<nav class="sitenav" aria-label="Menu principal"><a href="./" aria-current="page">Visualisation interactive BZD</a><a href="capture.html">Capture BZD</a><a href="infographies.html">Infographies BZD</a><a href="ad_synthese_prescripteurs.html">Infographies Antidépresseurs</a><a href="bb_synthese_prescripteurs.html">Visualisations Bêta-bloquants</a></nav>
+<!--/sitenav-->
 <main>
   <h1>Benzodiazépines : profils relatifs à doses équivalentes</h1>
   <p class="sub">Doses orales approximativement équivalentes à 10 mg de diazépam.</p>

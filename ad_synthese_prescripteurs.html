@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Antidépresseurs en France : synthèse pour prescripteurs</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#F6F8FA;--card:#FFFFFF;--ink:#15202B;--muted:#56626E;--line:#D5DBE1;--accent:#1F4E79;--accent-bg:#E5EEF7;--lab:#333333;
+--s-a-bg:#E2F1E9;--s-a-ink:#0B4F36;--s-r-bg:#E4ECF7;--s-r-ink:#163F6B;--s-c-bg:#FBEBD3;--s-c-ink:#6B3B00;--s-n-bg:#ECEEF0;--s-n-ink:#3F4750;--s-nd-ink:#56626E;
+--serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E151C;--card:#151F29;--ink:#E8EDF2;--muted:#A0ADB9;--line:#2B3844;--accent:#8DBBE8;--accent-bg:#1D2E40;--lab:#D3DAE1;
+--s-a-bg:#153A2B;--s-a-ink:#A9E3C7;--s-r-bg:#1B304A;--s-r-ink:#B4D2F2;--s-c-bg:#48310F;--s-c-ink:#F5D9A6;--s-n-bg:#222C36;--s-n-ink:#B7C1CB;--s-nd-ink:#A0ADB9}}
+:root[data-theme="dark"]{--bg:#0E151C;--card:#151F29;--ink:#E8EDF2;--muted:#A0ADB9;--line:#2B3844;--accent:#8DBBE8;--accent-bg:#1D2E40;--lab:#D3DAE1;
+--s-a-bg:#153A2B;--s-a-ink:#A9E3C7;--s-r-bg:#1B304A;--s-r-ink:#B4D2F2;--s-c-bg:#48310F;--s-c-ink:#F5D9A6;--s-n-bg:#222C36;--s-n-ink:#B7C1CB;--s-nd-ink:#A0ADB9}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5}
+main{max-width:1000px;margin:0 auto;padding:16px 14px 40px;overflow-wrap:anywhere}
+h1{font-family:var(--serif);font-size:1.55rem;line-height:1.2;margin:.2rem 0 .4rem;font-weight:700}
+h2{font-family:var(--serif);font-size:1.2rem;line-height:1.25;margin:1.8rem 0 .6rem;font-weight:700}
+h3{font-size:1rem;margin:1rem 0 .3rem}
+p{margin:.4rem 0}
+.lead{color:var(--muted);max-width:70ch;margin:0 0 .8rem}
+.small{font-size:.86rem;color:var(--muted)}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.ctrl{background:var(--bg);padding:8px 0 10px;border-bottom:1px solid var(--line);margin-bottom:6px}
+@media (min-width:760px){.ctrl{position:sticky;top:env(safe-area-inset-top,0px);z-index:5}}
+.ctrl-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.seg button{min-height:44px;padding:0 14px;border:0;background:transparent}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .seg button[aria-pressed="true"]{color:#0E151C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .seg button[aria-pressed="true"]{color:#0E151C}}
+.btn{min-height:44px;padding:0 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--card)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{min-height:44px;padding:0 12px;border:1.5px solid var(--line);border-radius:22px;background:var(--card);display:inline-flex;align-items:center;gap:8px}
+.chip[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-bg);font-weight:600}
+.chip .dot{width:14px;height:14px;border-radius:50%;display:inline-block;flex:none;border:2px solid transparent}
+.chip[aria-pressed="false"] .dot{opacity:.35}
+.wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+tr:last-child td,tr:last-child th{border-bottom:0}
+thead th{background:var(--card);font-weight:700;white-space:nowrap;position:sticky;top:0}
+tbody th{font-weight:600;min-width:130px;position:sticky;left:0;background:var(--card);z-index:1;border-right:1px solid var(--line)}
+td.cell{min-width:150px}
+.badge{display:inline-block;white-space:nowrap;flex:none;padding:1px 9px;border-radius:12px;font-weight:700;font-size:.8rem;border:1px solid transparent}
+.b-A{background:var(--s-a-bg);color:var(--s-a-ink)}
+.b-R{background:var(--s-r-bg);color:var(--s-r-ink)}
+.b-C{background:var(--s-c-bg);color:var(--s-c-ink)}
+.b-N{background:var(--s-n-bg);color:var(--s-n-ink)}
+.b-ND{background:transparent;color:var(--s-nd-ink);border:1px dashed var(--muted)}
+.note{display:block;color:var(--muted);font-size:.8rem;margin-top:3px;line-height:1.35}
+.repere{display:block;font-weight:400;color:var(--muted);font-size:.78rem;margin-top:3px}
+.list{display:grid;gap:8px}
+.item{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:10px 12px}
+.item h3{margin:0 0 4px;font-size:.98rem}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0;font-size:.84rem;color:var(--muted)}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.radars{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:760px){.radars.two{grid-template-columns:1fr 1fr}}
+.rcard{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:8px 8px 6px}
+.rcard h3{margin:4px 6px 0}
+.rcard svg{display:block;width:100%;height:auto;max-width:520px;margin:0 auto}
+.rcard .rlegend{display:flex;flex-wrap:wrap;gap:4px 12px;margin:2px 6px 6px;font-size:.8rem;color:var(--muted)}
+.rlegend i{display:inline-block;width:26px;height:0;border-top:3px solid;vertical-align:middle;margin-right:5px}
+details{border:1px solid var(--line);border-radius:10px;background:var(--card);margin:8px 0;padding:0 12px}
+summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
+details[open] summary{border-bottom:1px solid var(--line);margin-bottom:8px}
+details .body{padding:0 0 10px}
+dl{margin:.3rem 0}
+dt{font-weight:600;margin-top:.6rem}
+dd{margin:.1rem 0 0;color:var(--ink)}
+.src-id{font-size:.78rem;color:var(--muted);white-space:nowrap}
+ul.plain{margin:.3rem 0;padding-left:1.15rem}
+ul.plain li{margin:.25rem 0}
+ol.src{padding-left:0;list-style:none;margin:.4rem 0}
+ol.src li{margin:.55rem 0;padding-left:3.1rem;position:relative;font-size:.88rem;line-height:1.4}
+ol.src li b{position:absolute;left:0;top:0;min-width:2.6rem}
+.hyp{border-left:4px solid var(--accent);background:var(--card);padding:6px 14px;border-radius:0 10px 10px 0}
+.alert{border:1px solid var(--s-c-ink);border-radius:10px;background:var(--card);padding:10px 12px;margin:8px 0}
+.alert h3{margin:0 0 4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+:root{--pd:#1F4E79;--pk:#8A5A00;--ex:#7A2E63}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--pd:#8DBBE8;--pk:#E6B865;--ex:#E3A3CB}}
+:root[data-theme="dark"]{--pd:#8DBBE8;--pk:#E6B865;--ex:#E3A3CB}
+h1{font-size:1.6rem}
+.tabs{display:flex;gap:6px;position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--bg);padding:8px 0;margin:6px 0 4px;border-bottom:1px solid var(--line)}
+.tabs button{flex:1;min-height:48px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);font-weight:600;padding:0 6px;line-height:1.2}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .tabs button[aria-selected="true"]{color:#0E151C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tabs button[aria-selected="true"]{color:#0E151C}}
+.step{font-family:var(--serif);font-size:1.15rem;font-weight:700;margin:1.2rem 0 .5rem}
+.cand{display:grid;gap:8px;margin:8px 0}
+.cc{border:1px solid var(--line);border-left-width:6px;border-radius:10px;background:var(--card);padding:9px 12px}
+.cc h3{margin:0 0 3px;font-size:1rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.gap{background:var(--accent-bg);border-radius:10px;padding:8px 12px;margin:8px 0;font-size:.92rem}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:820px){.grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.grid.g3{grid-template-columns:1fr 1fr 1fr}}
+.fcard{border:1px solid var(--line);border-top:6px solid var(--c);border-radius:10px;background:var(--card);padding:6px 8px 8px}
+.fcard h3{margin:6px 6px 0;font-size:1.05rem}
+.fcard .sub{margin:0 6px 2px;color:var(--muted);font-size:.85rem}
+.fcard svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin:2px 6px 4px}
+.tags .badge{font-size:.75rem}
+.glegend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.82rem;margin:6px 0}
+.glegend b{font-weight:700}
+.g-pd{color:var(--pd)}.g-pk{color:var(--pk)}.g-cv{color:var(--pd)}.g-ex{color:var(--ex)}.g-gr{color:var(--muted)}
+.alerts summary{color:var(--s-c-ink);background:var(--s-c-bg);border-radius:10px;padding:0 12px}
+.alerts{border-color:var(--s-c-ink)}
+.mini{font-size:.82rem;color:var(--muted)}
+[hidden]{display:none!important}
+</style>
+<!--sitenav-style-->
+<style>
+.sitenav{max-width:1000px;margin:0 auto;padding:12px 16px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.88rem;line-height:1.2}
+.sitenav a{color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:0 12px;min-height:36px;display:inline-flex;align-items:center}
+.sitenav a:hover{border-color:var(--muted)}
+.sitenav a:focus-visible{outline:2px solid var(--muted);outline-offset:2px}
+.sitenav a[aria-current="page"]{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:600}
+.sitenav .sn-label{color:var(--muted);font-weight:600;margin-right:4px}
+.sitenav a.sn-back{color:var(--muted);border-style:dashed}
+</style>
+<!--/sitenav-style-->
+</head>
+<body>
+<!--sitenav-->
+<nav class="sitenav" aria-label="Menu principal"><a href="./">Visualisation interactive BZD</a><a href="capture.html">Capture BZD</a><a href="infographies.html">Infographies BZD</a><a href="ad_synthese_prescripteurs.html" aria-current="page">Infographies Antidépresseurs</a><a href="bb_synthese_prescripteurs.html">Visualisations Bêta-bloquants</a></nav>
+<!--/sitenav-->
+<main id="app"></main>
+<script>
+const RAW = {"MOLS": [{"id": "esc", "name": "Escitalopram", "cls": "ISRS", "color": "#0072B2", "dash": "0"}, {"id": "ser", "name": "Sertraline", "cls": "ISRS", "color": "#56B4E9", "dash": "6 3"}, {"id": "flu", "name": "Fluoxétine", "cls": "ISRS", "color": "#8E7CC3", "dash": "2 3"}, {"id": "par", "name": "Paroxétine", "cls": "ISRS", "color": "#666666", "dash": "9 3 2 3"}, {"id": "ven", "name": "Venlafaxine", "cls": "IRSNa", "color": "#009E73", "dash": "0"}, {"id": "dul", "name": "Duloxétine", "cls": "IRSNa", "color": "#A6761D", "dash": "6 3"}, {"id": "mir", "name": "Mirtazapine", "cls": "Antagoniste α2 et H1", "color": "#D55E00", "dash": "0"}, {"id": "ami", "name": "Amitriptyline", "cls": "Tricyclique", "color": "#CC79A7", "dash": "1 4"}, {"id": "clo", "name": "Clomipramine", "cls": "Tricyclique", "color": "#E69F00", "dash": "5 2 1 2"}], "CONF": {"axk": ["sed", "ach", "sex", "od", "cyp", "t12"], "axs": {"sed": ["Sédation", "pd"], "ach": ["Effet atropinique", "pd"], "sex": ["Dysfonction sexuelle", "pd"], "od": ["Toxicité en surdosage", "ex"], "cyp": ["Inhibition CYP2D6", "ex"], "t12": ["Demi-vie", "pk"]}, "ish": {"edm": ["Dépression", "cv"], "anx": ["Anxiété", "cv"], "toc": ["TOC", "cv"], "dou": ["Douleur neuropathique", "ex"], "mig": ["Migraine", "ex"], "bou": ["Boulimie", "cv"]}, "chip": {"edm": "Dépression (EDM)", "anx": "Troubles anxieux", "toc": "TOC", "dou": "Douleur neuropathique", "mig": "Migraine", "bou": "Boulimie"}, "stv": {"A": 2, "R": 1, "N": 0, "ND": null}, "pdTitle": "Profil de tolérance et d'interactions", "indTitle": "Empreinte d'indications", "title": "Antidépresseurs en France : synthèse pour prescripteurs", "lead": "Neuf molécules réparties en cinq groupes : leur statut par situation clinique et leur profil de tolérance et d'interactions en radar.", "alertSummary": "Alertes (2) : QT de l'escitalopram, inhibiteurs puissants du CYP2D6", "pdKey": "<span class=\"g-pd\"><b>Tolérance</b></span><span class=\"g-ex\"><b>Sécurité et interactions</b></span><span class=\"g-pk\"><b>Pharmacocinétique</b></span>", "indKey": "<span class=\"g-cv\"><b>Psychiatrie</b></span><span class=\"g-ex\"><b>Douleur et neurologie</b></span>", "indScale": "2 = AMM vérifiée, 1 = cité par la note (AMM non vérifiée), 0 = non cité ; point creux : non documenté", "read": ["Chaque branche est une propriété ; plus le tracé s'écarte du centre, plus la propriété est marquée (0 à 4). Pour la sédation, l'effet atropinique (anticholinergique), la dysfonction sexuelle et la toxicité en surdosage, un score élevé signale un inconvénient.", "La surface n'est pas un score global : elle n'indique ni une meilleure efficacité ni une meilleure tolérance individuelle, la variabilité interindividuelle étant importante.", "L'empreinte d'indications (0 à 2) résume le statut français : 2 = AMM vérifiée, 1 = cité par la note fournie sans vérification du RCP, 0 = non cité.", "Un point creux signale une donnée non documentée, tracée à 0 par convention."], "selRefs": "S1, S3", "checklist": ["Indication et niveau de preuve : dépression, anxiété, TOC, douleur, boulimie.", "Risque suicidaire et âge, surtout à l'initiation et lors des changements de dose.", "Recherche d'un trouble bipolaire : un antidépresseur seul peut favoriser un virage maniaque.", "Interactions pharmacodynamiques : syndrome sérotoninergique, hémorragie, allongement du QT, sédation, convulsions.", "Interactions pharmacocinétiques : CYP2D6, CYP2C19, CYP1A2 et CYP3A4.", "Demi-vie et sevrage : risque élevé avec la paroxétine et la venlafaxine ; moindre avec la fluoxétine mais interactions prolongées ; arrêt progressif pour tous.", "Poids, sommeil, appétit : mirtazapine et amitriptyline sédatives et orexigènes ; fluoxétine plutôt activante.", "Risque cardiaque : QT (citalopram, escitalopram), conduction (tricycliques), pression artérielle (venlafaxine).", "Fonction rénale et hépatique, notamment duloxétine, venlafaxine, citalopram et tricycliques.", "Grossesse, allaitement et âge avancé : choix et surveillance individualisés."]}, "AXES": {"sed": {"label": "Sédation", "rule": "0 = plutôt activant ; 1 = sédation faible ou possible ; 2 = sédation modérée ; 3 = sédation marquée ; 4 = aucune molécule retenue. Jugement fondé sur les affirmations des sources citées : sédation plus fréquente avec les tricycliques et la mirtazapine qu'avec les ISRS et IRSNa (S9), effet H1 de la mirtazapine (S10)."}, "ach": {"label": "Effet atropinique", "rule": "Effet atropinique (anticholinergique). 0 = négligeable (Ki de 400 nM et plus ou inhibition inférieure à 20 % aux concentrations cliniques) ; 1 = sécheresse buccale sans affinité muscarinique notable ; 2 = notable (paroxétine, Ki de 72 à 108 nM) ; 3 = marqué ; 4 = le plus marqué (amitriptyline). Jugement fondé sur S1, S6, S7, S8."}, "sex": {"label": "Dysfonction sexuelle", "rule": "1 = moindre qu'avec les ISRS (mirtazapine) ; 2 = fréquente, environ 40 % pour l'escitalopram (S6) ou troubles de la libido signalés (duloxétine, S4) ; 3 = très fréquente (ISRS, environ 80 % pour la sertraline dans S6 ; venlafaxine, clomipramine) ; 4 = aucune molécule retenue. Point creux : non documenté dans les sources."}, "od": {"label": "Toxicité en surdosage", "rule": "1 = comparable aux ISRS, plus sûrs que les tricycliques mais non dénués de toxicité (S1, S10) ; 4 = toxicité importante avec élargissement du QRS, arythmies, convulsions, coma (tricycliques, S1). Point creux : non documenté."}, "cyp": {"label": "Inhibition CYP2D6", "rule": "0 = peu ou pas d'inhibition ; 1 = faible ; 2 = modérée ; 4 = puissante (fluoxétine, paroxétine). Score retenu : classifications de S11 et S12, complétées par S1 et S13 ; divergences signalées pour la sertraline et la venlafaxine ; mirtazapine, amitriptyline : non documenté de façon fiable."}, "t12": {"label": "Demi-vie", "rule": "Règle appliquée au milieu de la fourchette publiée pour la molécule mère : moins de 8 h = 1 ; 8 h à moins de 20 h = 2 ; 20 h à moins de 30 h = 3 ; 30 h et plus = 4. Les métabolites actifs (fluoxétine, venlafaxine, clomipramine) allongent la durée d'effet."}}, "SC": {"esc": {"sed": [1, "jugement", "sédation citée parmi les effets des ISRS", "", ["S3", "S9"]], "ach": [0, "jugement", "Ki 1240 nM", "", ["S6"]], "sex": [2, "jugement", "≈ 40 %", "", ["S6"]], "od": [1, "jugement", "ISRS plus sûrs que les tricycliques", "", ["S1"]], "cyp": [1, "jugement", "faible", "faible (S11, S12)", ["S11", "S12"]], "t12": [3, "dérivé", "27–32 h", "", ["S1"]]}, "ser": {"sed": [1, "jugement", "sédation citée parmi les effets des ISRS", "", ["S3", "S9"]], "ach": [0, "jugement", "Ki 430 nM", "", ["S6"]], "sex": [3, "jugement", "≈ 80 %", "", ["S6"]], "od": [1, "jugement", "ISRS plus sûrs que les tricycliques", "", ["S1"]], "cyp": [2, "jugement", "modérée", "faible (S11) ; modérée (S1, S12)", ["S1", "S11", "S12"]], "t12": [3, "dérivé", "≈ 26 h", "", ["S1"]]}, "flu": {"sed": [0, "jugement", "plutôt activante (agitation, insomnie)", "", ["S1"]], "ach": [0, "jugement", "inhibition muscarinique inférieure à 20 %", "", ["S8"]], "sex": [3, "jugement", "fréquente (ISRS)", "", ["S1"]], "od": [1, "jugement", "ISRS plus sûrs que les tricycliques", "", ["S1"]], "cyp": [4, "jugement", "inhibiteur puissant", "", ["S1", "S11", "S12"]], "t12": [4, "dérivé", "2–4 jours ; norfluoxétine 7–9 jours", "", ["S1"]]}, "par": {"sed": [2, "jugement", "sédation citée parmi ses effets", "", ["S6"]], "ach": [2, "jugement", "Ki 72 à 108 nM", "inhibition muscarinique inférieure à 20 % aux concentrations cliniques (S8)", ["S1", "S6", "S7", "S8"]], "sex": [3, "jugement", "fréquente ; la plus élevée des ISRS (pharmacovigilance)", "", ["S1", "S7"]], "od": [1, "jugement", "ISRS plus sûrs que les tricycliques", "", ["S1"]], "cyp": [4, "jugement", "inhibiteur puissant", "", ["S1", "S11", "S12"]], "t12": [3, "dérivé", "≈ 21 h", "", ["S1"]]}, "ven": {"sed": [1, "jugement", "agitation plutôt que sédation", "", ["S1", "S9"]], "ach": [1, "jugement", "sécheresse buccale", "", ["S4"]], "sex": [3, "jugement", "dysfonction sexuelle citée", "", ["S1"]], "od": [1, "jugement", "toxicité proche de celle des ISRS", "", ["S10"]], "cyp": [1, "jugement", "faible ou négligeable", "faible (S12) ; peu d'inhibition (S13)", ["S12", "S13"]], "t12": [1, "dérivé", "≈ 5 h ; desvenlafaxine ≈ 11 h", "", ["S1"]]}, "dul": {"sed": [1, "jugement", "somnolence ou insomnie", "", ["S1", "S4"]], "ach": [1, "jugement", "sécheresse buccale", "", ["S4"]], "sex": [2, "jugement", "troubles de la libido signalés", "", ["S4"]], "od": [1, "jugement", "toxicité proche de celle des ISRS", "", ["S10"]], "cyp": [2, "jugement", "modérée", "", ["S11", "S12"]], "t12": [2, "dérivé", "≈ 12 h", "", ["S1"]]}, "mir": {"sed": [3, "jugement", "marquée, surtout à faible dose", "", ["S1", "S9", "S10"]], "ach": [1, "jugement", "bouche sèche", "", ["S1"]], "sex": [1, "jugement", "moindre qu'avec les ISRS chez certains patients", "", ["S1"]], "od": [null, "jugement", "non documenté dans les sources retenues", "", ["S1"]], "cyp": [null, "jugement", "non documenté de façon fiable dans les sources retenues", "", ["S13"]], "t12": [4, "dérivé", "20–40 h", "", ["S1"]]}, "ami": {"sed": [3, "jugement", "sédative, orexigène", "", ["S1", "S4"]], "ach": [4, "jugement", "charge anticholinergique importante", "", ["S1", "S4"]], "sex": [null, "jugement", "non documenté dans les sources retenues", "", ["S1"]], "od": [4, "jugement", "toxicité importante en surdosage", "", ["S1"]], "cyp": [null, "jugement", "non documenté dans les sources retenues", "", ["S1"]], "t12": [2, "dérivé", "10–28 h", "", ["S1"]]}, "clo": {"sed": [3, "jugement", "sédation citée", "", ["S1"]], "ach": [3, "jugement", "effets anticholinergiques", "", ["S1", "S4"]], "sex": [3, "jugement", "dysfonction sexuelle citée", "", ["S1"]], "od": [4, "jugement", "toxicité importante en surdosage", "", ["S1"]], "cyp": [1, "jugement", "faible ou non classée", "", ["S12"]], "t12": [3, "dérivé", "17–37 h ; métabolite actif plus prolongé", "", ["S1"]]}}, "SRC": {"S1": "Note de synthèse « Antidépresseurs à retenir selon l'indication » fournie par AF (septembre 2026), fondée sur : ANSM, dossier thématique Antidépresseurs ; HAS ; StatPearls (NBK541006, NBK560692, NBK459223, NBK554406, NBK549806, NBK537225). Demi-vies, voies métaboliques et caractéristiques cliniques reprises telles quelles, non recoupées avec les RCP ni relues à la source.", "S2": "Haute Autorité de santé, Commission de la transparence. Avis SEROPLEX (escitalopram) : cinq indications (épisode dépressif majeur, panique, anxiété sociale, anxiété généralisée, TOC) ; vingt-trois antidépresseurs commercialisés, tous indiqués dans l'épisode dépressif majeur. has-sante.fr, document seroplex_avis1_r1_ct11853.pdf, consulté le 21/09/2026.", "S3": "La Revue du Praticien. Place des antidépresseurs dans la prise en charge du trouble obsessionnel compulsif (AMM en TOC : fluoxétine, paroxétine, sertraline, escitalopram, citalopram, fluvoxamine ; clomipramine seule alternative ; ECG et dosage plasmatique aux doses élevées). larevuedupraticien.fr, consulté le 21/09/2026.", "S4": "La Revue du Praticien. Traitements médicaux de la douleur neuropathique disponibles en ville et recommandés par les sociétés savantes (tableau 1). 2025;75(8):819-826, publié le 14/10/2025. larevuedupraticien.fr, consulté le 21/09/2026.", "S5": "Collège de la Médecine Générale / ebmfrance.net. Synthèse des antidépresseurs disponibles, d'après la recommandation de bonne pratique HAS 2017 (interactions avec fluoxétine, fluvoxamine, paroxétine ; allongement du QT pour citalopram et escitalopram ; sevrage). ebmfrance.net, consulté le 21/09/2026.", "S6": "A comparative review of escitalopram, paroxetine, and sertraline: are they all alike? Int Clin Psychopharmacol (Ki muscariniques et noradrénergiques ; dysfonction sexuelle, méta-analyse de Serretti et Chiesa 2009). PMC4047306, consulté le 21/09/2026.", "S7": "Comparative Real-World Safety Profiles of Six Selective Serotonin Reuptake Inhibitors: A Global Pharmacovigilance Analysis (VigiBase, plus de 342 000 signalements). PMC12775886, consulté le 21/09/2026.", "S8": "Evaluation of inhibitory actions of antidepressants on muscarinic receptors assessed by a binding assay in the mouse cerebral neocortex. ScienceDirect, 2024, article S1347861324000641, consulté le 21/09/2026.", "S9": "Managing the Adverse Effects of Antidepressants. Psychiatric Times, consulté le 21/09/2026 (sédation plus fréquente avec tricycliques et mirtazapine ; effets sexuels plus fréquents avec les ISRS qu'avec les agents noradrénergiques).", "S10": "Merck Manual, édition professionnelle. Medications for Treatment of Depression, consulté le 21/09/2026 (mirtazapine : sédation et prise de poids par blocage H1 ; toxicité des IRSNa proche de celle des ISRS ; symptômes de discontinuation des IRSNa).", "S11": "Table 3 « CYP2D6 inhibitors » (inhibiteurs forts, modérés, faibles). Per Med. 2018;15(2):117-126. PMC6460918, consulté le 21/09/2026.", "S12": "Table 1 « CYP2D6 inhibitors observed in study, by inhibitor strength ». Cancer Causes Control. 2018;30(1):103-112, doi:10.1007/s10552-018-1117-x. PMC6353670, consulté le 21/09/2026.", "S13": "Table 3 « Major drug classes divided by known CYP2D6 inhibitory activity » (inhibiteurs modérés à puissants, faibles à modérés, peu d'inhibition ; tamoxifène). PMC2881853, consulté le 21/09/2026.", "S15": "Haute Autorité de santé, Commission de la transparence. Avis CYMBALTA (duloxétine), mars 2016 : prévention des récidives d'épisodes dépressifs majeurs, indication déjà obtenue pour la venlafaxine et la sertraline. Document publié par Lilly France, consulté le 21/09/2026."}, "STAT": {"A": "AMM", "R": "Note", "N": "Non cité", "ND": "n.d."}, "ROWS": [["edm", "Épisode dépressif majeur", "Les 23 antidépresseurs commercialisés en France sont tous indiqués dans l'épisode dépressif majeur ; les ISRS sont généralement le choix de première intention.", ["S1", "S2"]], ["anx", "Troubles anxieux : anxiété généralisée, panique, anxiété sociale", "Efficacité souvent retardée ; introduction progressive, car une activation anxieuse initiale est possible.", ["S1"]], ["toc", "Trouble obsessionnel-compulsif", "Fluoxétine, paroxétine, sertraline, escitalopram et citalopram ont une AMM ; la clomipramine est la seule alternative aux ISRS.", ["S3"]], ["dou", "Douleur neuropathique", "Duloxétine privilégiée si composante dépressive ou anxieuse ; amitriptyline si insomnie ou douleur nocturne.", ["S1", "S4"]], ["mig", "Migraine : traitement de fond", "", []], ["bou", "Boulimie nerveuse", "Fluoxétine : molécule de référence parmi les antidépresseurs, souvent à 60 mg/j dans les essais.", ["S1"]]], "MX": {"edm": {"esc": ["A", "Épisode dépressif majeur.", ["S2"]], "ser": ["A", "Épisode dépressif majeur ; prévention des récidives.", ["S2", "S15"]], "flu": ["A", "Épisode dépressif majeur.", ["S2"]], "par": ["A", "Épisode dépressif majeur.", ["S2"]], "ven": ["A", "Épisode dépressif majeur ; prévention des récidives.", ["S2", "S4", "S15"]], "dul": ["A", "Épisode dépressif majeur.", ["S2", "S4"]], "mir": ["A", "Épisode dépressif majeur ; choisie si insomnie, anorexie ou perte de poids.", ["S1", "S2"]], "ami": ["A", "Dépression majeure ; rarement de première intention.", ["S1", "S4"]], "clo": ["A", "Dépression majeure.", ["S4"]]}, "anx": {"esc": ["A", "Panique, anxiété sociale, anxiété généralisée.", ["S2"]], "ser": ["R", "Cité pour l'anxiété par la note ; AMM non vérifiée.", ["S1"]], "flu": ["R", "Cité « selon l'indication » par la note ; AMM non vérifiée.", ["S1"]], "par": ["R", "Cité pour l'anxiété par la note ; AMM non vérifiée.", ["S1"]], "ven": ["A", "Anxiété généralisée, phobie sociale, trouble panique.", ["S4"]], "dul": ["A", "Trouble anxieux généralisé.", ["S4"]], "mir": ["N", "Non cité dans les sources retenues.", ["S1"]], "ami": ["N", "Non cité dans les sources retenues.", ["S1"]], "clo": ["A", "Trouble panique.", ["S4"]]}, "toc": {"esc": ["A", "Trouble obsessionnel-compulsif.", ["S2", "S3"]], "ser": ["A", "Trouble obsessionnel-compulsif.", ["S3"]], "flu": ["A", "Trouble obsessionnel-compulsif.", ["S3"]], "par": ["A", "Trouble obsessionnel-compulsif.", ["S3"]], "ven": ["ND", "Cité dans un tableau (S4), absent de la liste des AMM en TOC (S3) : non tranché.", ["S3", "S4"]], "dul": ["N", "Non cité dans les sources retenues.", ["S1"]], "mir": ["N", "Non cité dans les sources retenues.", ["S1"]], "ami": ["N", "Non cité dans les sources retenues.", ["S1"]], "clo": ["R", "Seule alternative aux ISRS (S3) ; AMM non vérifiée.", ["S1", "S3"]]}, "dou": {"esc": ["N", "Non cité dans les sources retenues.", ["S1"]], "ser": ["N", "Non cité dans les sources retenues.", ["S1"]], "flu": ["N", "Non cité dans les sources retenues.", ["S1"]], "par": ["N", "Non cité dans les sources retenues.", ["S1"]], "mir": ["N", "Non cité dans les sources retenues.", ["S1"]], "ven": ["R", "« Parfois » selon la note ; pas d'AMM antalgique dans S4.", ["S1", "S4"]], "dul": ["A", "Neuropathie douloureuse du diabète.", ["S4"]], "ami": ["A", "Douleur neuropathique ; 5 à 25 mg le soir au début, maximum 150 mg/j.", ["S4"]], "clo": ["A", "Douleur neuropathique.", ["S4"]]}, "mig": {"esc": ["N", "Non cité dans les sources retenues.", ["S1"]], "ser": ["N", "Non cité dans les sources retenues.", ["S1"]], "flu": ["N", "Non cité dans les sources retenues.", ["S1"]], "par": ["N", "Non cité dans les sources retenues.", ["S1"]], "ven": ["N", "Non cité dans les sources retenues.", ["S1"]], "dul": ["N", "Non cité dans les sources retenues.", ["S1"]], "mir": ["N", "Non cité dans les sources retenues.", ["S1"]], "clo": ["N", "Non cité dans les sources retenues.", ["S1"]], "ami": ["A", "Traitement de fond de la migraine.", ["S4"]]}, "bou": {"esc": ["N", "Non cité dans les sources retenues.", ["S1"]], "ser": ["N", "Non cité dans les sources retenues.", ["S1"]], "par": ["N", "Non cité dans les sources retenues.", ["S1"]], "ven": ["N", "Non cité dans les sources retenues.", ["S1"]], "dul": ["N", "Non cité dans les sources retenues.", ["S1"]], "mir": ["N", "Non cité dans les sources retenues.", ["S1"]], "ami": ["N", "Non cité dans les sources retenues.", ["S1"]], "clo": ["N", "Non cité dans les sources retenues.", ["S1"]], "flu": ["R", "Référence pour la boulimie selon la note, souvent 60 mg/j ; à confirmer sur le RCP.", ["S1"]]}}, "SELECTION": [["ISRS : escitalopram, sertraline, fluoxétine, paroxétine", "Première classe prescrite en 2023 ; première intention dans l'épisode dépressif ; AMM en TOC. La fluoxétine est individualisée pour la boulimie.", "Volume par molécule non chiffré."], ["IRSNa : venlafaxine, duloxétine", "Dépression avec anxiété importante ou échec des ISRS ; duloxétine dans la douleur neuropathique du diabète.", "Deux profils cardiovasculaires et hépatiques distincts."], ["Mirtazapine", "Dépression avec insomnie, anxiété, anorexie ou perte de poids.", "Effets sédatif et orexigène."], ["Amitriptyline", "Douleur neuropathique et traitement de fond de la migraine (AMM) : molécule de référence dans une indication précise, peu dominante en psychiatrie.", "Toxicité en surdosage ; défavorable chez le sujet âgé."], ["Clomipramine", "Seule alternative aux ISRS dans le TOC ; AMM en douleur neuropathique et trouble panique.", "Profil anticholinergique, cardiaque et toxique."]], "EXCLUS": [["Citalopram, fluvoxamine", "Cités dans la note sans être retenus dans la liste courte ; le citalopram partage l'alerte QT de l'escitalopram."], ["Vortioxétine, agomélatine, tianeptine, milnacipran", "Non retenus dans la liste courte de la note."], ["Miansérine, IMAO", "Situations particulières ou usage restreint ; non couverts."]], "PK": {"esc": {"met": "CYP2C19, 3A4 et 2D6.", "part": "Bien toléré ; attention au QT, surtout à dose élevée, chez le sujet âgé, en cas d'hypokaliémie ou d'association à d'autres médicaments allongeant le QT.", "src": ["S1"]}, "ser": {"met": "Hépatique ; inhibition du CYP2D6 relativement modérée.", "part": "Souvent intéressante chez le sujet âgé ou en polymédication ; effets digestifs fréquents au début.", "src": ["S1"]}, "flu": {"met": "Inhibiteur important du CYP2D6, inhibition du CYP2C19.", "part": "Très longue persistance après l'arrêt : peu de syndrome de sevrage mais interactions prolongées plusieurs semaines. Utile dans la boulimie ; activation, agitation, insomnie possibles.", "src": ["S1"]}, "par": {"met": "Inhibiteur puissant du CYP2D6.", "part": "Syndrome de sevrage fréquent ; dysfonction sexuelle, prise de poids et effets anticholinergiques plus marqués ; à éviter autant que possible pendant la grossesse.", "src": ["S1"]}, "ven": {"met": "Principalement CYP2D6.", "part": "Effet noradrénergique et augmentation de la pression artérielle plus importants aux doses élevées ; sevrage souvent marqué, arrêt progressif.", "src": ["S1"]}, "dul": {"met": "CYP1A2 et CYP2D6.", "part": "Précautions : maladie hépatique, consommation importante d'alcool, insuffisance rénale sévère ; pression artérielle ; interactions avec les inhibiteurs du CYP1A2 ou du CYP2D6.", "src": ["S1"]}, "mir": {"met": "CYP2D6, 3A4 et 1A2.", "part": "Sédation, prise de poids ; potentialisation par l'alcool, les opioïdes et les benzodiazépines ; moins adaptée en cas de surpoids ou de syndrome métabolique.", "src": ["S1"]}, "ami": {"met": "Principalement CYP2D6 et CYP2C19.", "part": "Effets anticholinergiques, antihistaminiques, anti-α1 et stabilisants de membrane ; précautions : glaucome à angle fermé, rétention urinaire, troubles de conduction, infarctus récent, épilepsie, sujet âgé fragile.", "src": ["S1"]}, "clo": {"met": "CYP2D6 et CYP1A2.", "part": "Fluoxétine, paroxétine et bupropion augmentent son exposition ; association aux IMAO contre-indiquée ; ECG chez les patients à risque ; QT, convulsions.", "src": ["S1"]}}, "DOSES": [["esc", "Posologie non relevée dans les sources retenues : voir le RCP.", ["S1"]], ["ser", "Posologie non relevée dans les sources retenues : voir le RCP.", ["S1"]], ["flu", "Boulimie : souvent 60 mg/j dans les essais ; autres posologies non relevées.", ["S1"]], ["par", "Posologie non relevée dans les sources retenues : voir le RCP.", ["S1"]], ["ven", "Douleur : 37,5 mg/j au début, 150 mg/j en moyenne, maximum 225 mg/j ; posologie en dépression non relevée.", ["S4"]], ["dul", "Douleur : 30 mg/j au début, 60 mg/j en moyenne, maximum 120 mg/j en deux prises.", ["S4"]], ["mir", "Posologie non relevée dans les sources retenues : voir le RCP.", ["S1"]], ["ami", "Douleur : 5 à 25 mg le soir au début, 50 mg/j en moyenne, maximum 150 mg/j ; éviter plus de 75 mg/j après 65 ans.", ["S4"]], ["clo", "Douleur : mêmes repères que l'amitriptyline dans le tableau source ; posologie en TOC non relevée.", ["S4"]]], "DIVERG": [["Inhibition du CYP2D6 par la sertraline", "Faible (S11) ; modérée (S1, S12).", "Score 2 (modérée), retenu avec la note et S12 ; fourchette 1 à 2 affichée.", ["S1", "S11", "S12"]], ["Effet anticholinergique de la paroxétine", "Ki de 72 nM (S6) et 108 nM (S7) : effets anticholinergiques cliniques ; inhibition muscarinique inférieure à 20 % aux concentrations cliniques dans une étude de liaison sur néocortex de souris (S8).", "Score 2, cohérent avec la note et la pharmacovigilance ; divergence signalée.", ["S1", "S6", "S7", "S8"]], ["Inhibition du CYP2D6 par la venlafaxine", "Faible (S12) ; peu d'inhibition attendue (S13).", "Score 1, fourchette 0 à 1.", ["S12", "S13"]], ["Venlafaxine et TOC", "Citée parmi les indications d'un tableau sur la douleur neuropathique (S4) ; absente de la liste des antidépresseurs ayant une AMM en TOC (S3).", "Statut non documenté : à vérifier sur le RCP.", ["S3", "S4"]], ["Dysfonction sexuelle : sertraline et escitalopram", "Environ 80 % pour la sertraline et 40 % pour l'escitalopram dans une méta-analyse citée par S6 ; la pharmacovigilance place la paroxétine au premier rang des ISRS (S7).", "Deux mesures différentes (incidence en essais, disproportionnalité de signalements) : scores 3 pour la sertraline et la paroxétine, 2 pour l'escitalopram.", ["S6", "S7"]]], "ALERTS": [["Escitalopram et citalopram : allongement du QT", "Risque dose-dépendant, surtout chez le sujet âgé, en cas d'hypokaliémie ou d'association à d'autres médicaments allongeant le QT. Aux doses élevées, au-delà de celles de l'AMM, un ECG et un dosage plasmatique sont recommandés.", ["S1", "S3", "S5"], ["esc"]], ["Fluoxétine et paroxétine : inhibiteurs puissants du CYP2D6", "Interactions étendues (tricycliques, antipsychotiques, certains opioïdes) ; persistance de plusieurs semaines après l'arrêt de la fluoxétine ; à éviter chez les femmes recevant du tamoxifène au long cours.", ["S1", "S11", "S13"], ["flu", "par"]]], "HYPOTHESES": ["Périmètre : cinq groupes, neuf molécules, retenus d'après la note fournie (S1). Aucun classement par volume de délivrance par molécule n'a été établi ; seule la place des ISRS comme première classe prescrite en 2023 est reprise de la note (S1).", "Les scores de 0 à 4 sont ordinaux et résultent d'un jugement fondé sur les affirmations des sources citées ; la règle de chaque axe est affichée. Ils ne mesurent ni l'efficacité ni la tolérance individuelle, la variabilité interindividuelle étant importante (S3), et ne doivent pas être additionnés.", "Les demi-vies, voies métaboliques et caractéristiques cliniques viennent de la note (S1), non recoupées avec les RCP.", "Statut « AMM » : vérifié par la HAS (S2) ou La Revue du Praticien (S3, S4). Statut « Note » : usage cité par la note sans vérification du RCP (sertraline, fluoxétine et paroxétine en anxiété ; clomipramine en TOC ; fluoxétine en boulimie ; venlafaxine en douleur). Les RCP par spécialité peuvent différer.", "Un point creux signale une donnée non documentée, tracée à 0 par convention (amitriptyline : dysfonction sexuelle et CYP2D6 ; mirtazapine : surdosage et CYP2D6).", "Les posologies ne sont données que lorsqu'une source les fournit ; aucune équivalence de dose entre antidépresseurs n'est présumée.", "Hors périmètre : citalopram, fluvoxamine, vortioxétine, agomélatine, tianeptine, milnacipran, miansérine, IMAO ; disponibilité des spécialités (voir le tableau ANSM).", "Outil d'information destiné aux professionnels de santé ; il ne constitue pas une recommandation de prescription."]};
+const CONF = RAW.CONF, M = RAW.MOLS, SC = RAW.SC, SRC = RAW.SRC, MX = RAW.MX;
+const COL = m => m.color === '#666666' ? 'var(--lab)' : m.color;
+const AXK = CONF.axk, AXS = CONF.axs, ISH = CONF.ish, CHIP = CONF.chip, STV = CONF.stv;
+const IND = RAW.ROWS.map(r => ({ id: r[0], label: r[1], rep: r[2], src: r[3] }));
+const state = { tab: 'sit', ind: 'edm', sitSel: null, fview: 'pd', cmode: 'multi', cmol: ['esc', 'ami', 'mir'] };
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const srcTag = a => a && a.length ? '<span class="src-id">[' + a.join(', ') + ']</span>' : '';
+const badge = st => '<span class="badge b-' + st + '">' + RAW.STAT[st] + '</span>';
+
+function wrap(t, n) { const out = []; let cur = ''; t.split(' ').forEach(w => { if ((cur + ' ' + w).trim().length > n && cur) { out.push(cur); cur = w; } else cur = (cur + ' ' + w).trim(); }); out.push(cur); return out; }
+
+function radar(spec) {
+  const W = 420, H = 340, cx = 210, cy = 172, R = 96, n = spec.axes.length, MAX = spec.max;
+  const ang = i => -Math.PI / 2 + 2 * Math.PI * i / n;
+  const P = (i, v) => [cx + R * (v / MAX) * Math.cos(ang(i)), cy + R * (v / MAX) * Math.sin(ang(i))];
+  const f = x => x.toFixed(1);
+  let g = '';
+  for (let r = 1; r <= MAX; r++) g += '<polygon points="' + spec.axes.map((a, i) => P(i, r).map(f).join(',')).join(' ') + '" fill="none" style="stroke:var(--line)" stroke-width="' + (r === MAX ? 1.4 : 1) + '"/>';
+  spec.axes.forEach((a, i) => {
+    const e = P(i, MAX); g += '<line x1="' + cx + '" y1="' + cy + '" x2="' + f(e[0]) + '" y2="' + f(e[1]) + '" style="stroke:var(--line)"/>';
+    const c = Math.cos(ang(i)), s = Math.sin(ang(i));
+    const lx = cx + (R + 14) * c, ly = cy + (R + 14) * s;
+    const anchor = c > 0.3 ? 'start' : (c < -0.3 ? 'end' : 'middle');
+    const ls = wrap(a.t, 13);
+    const y0 = ly + (s > 0.4 ? 8 : (s < -0.4 ? -4 - (ls.length - 1) * 14 : 4 - (ls.length - 1) * 7));
+    g += '<text x="' + f(lx) + '" y="' + f(y0) + '" text-anchor="' + anchor + '" font-size="13.5" font-weight="600" class="g-' + a.g + '" style="fill:currentColor">' +
+      ls.map((t, j) => '<tspan x="' + f(lx) + '" dy="' + (j ? 14 : 0) + '">' + esc(t) + '</tspan>').join('') + '</text>';
+  });
+  for (let r = 1; r <= MAX; r++) { const p = P(0, r); g += '<text x="' + f(p[0] + 4) + '" y="' + f(p[1] + 4) + '" font-size="10.5" style="fill:var(--muted)">' + r + '</text>'; }
+  spec.series.forEach(se => {
+    const pts = se.vals.map((v, i) => P(i, v === null ? 0 : v));
+    g += '<polygon data-poly="' + se.m.id + '" points="' + pts.map(p => p.map(f).join(',')).join(' ') + '" style="fill:' + COL(se.m) + ';stroke:' + COL(se.m) + '" fill-opacity="' + (spec.series.length > 2 ? 0.07 : 0.16) + '" stroke-width="2.4" stroke-dasharray="' + se.m.dash + '" stroke-linejoin="round"/>';
+    se.vals.forEach((v, i) => { const p = pts[i];
+      g += v === null
+        ? '<circle cx="' + f(p[0]) + '" cy="' + f(p[1]) + '" r="4.2" style="fill:var(--card);stroke:' + COL(se.m) + '" stroke-width="2"><title>' + esc(se.m.name + ' : ' + spec.axes[i].t + ' non documenté') + '</title></circle>'
+        : '<circle cx="' + f(p[0]) + '" cy="' + f(p[1]) + '" r="3.4" style="fill:' + COL(se.m) + '"><title>' + esc(se.m.name + ' : ' + spec.axes[i].t + ' ' + v + '/' + MAX) + '</title></circle>'; });
+  });
+  const desc = spec.title + ', échelle 0 au centre à ' + MAX + ' au bord. ' + spec.series.map(se => se.m.name + ' : ' + se.vals.map((v, i) => spec.axes[i].t + ' ' + (v === null ? 'non documenté' : v)).join(', ')).join(' ; ');
+  return '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(spec.title) + '"><desc>' + esc(desc) + '</desc>' + g + '</svg>';
+}
+
+const pdSpec = mols => ({ title: CONF.pdTitle, max: 4, axes: AXK.map(k => ({ t: AXS[k][0], g: AXS[k][1] })), series: mols.map(m => ({ m, vals: AXK.map(k => SC[m.id][k][0]) })) });
+const indSpec = mols => ({ title: CONF.indTitle, max: 2, axes: IND.map(r => ({ t: ISH[r.id][0], g: ISH[r.id][1] })), series: mols.map(m => ({ m, vals: IND.map(r => STV[MX[r.id][m.id][0]]) })) });
+const legend = mols => '<div class="rlegend">' + mols.map(m => '<span><i style="border-color:' + COL(m) + ';border-top-style:' + (m.dash === '0' ? 'solid' : 'dashed') + '"></i>' + esc(m.name) + '</span>').join('') + '</div>';
+const pdKey = '<div class="glegend">' + CONF.pdKey + '<span class="mini">0 au centre, 4 au bord ; point creux : non documenté</span></div>';
+const indKey = '<div class="glegend">' + CONF.indKey + '<span class="mini">' + CONF.indScale + '</span></div>';
+
+function chipsHTML(items, sel, attr) {
+  return '<div class="chips">' + items.map(it => '<button type="button" class="chip" ' + attr + '="' + it.id + '" aria-pressed="' + sel.includes(it.id) + '">' + (it.color ? '<span class="dot" style="background:' + it.color + '"></span>' : '') + esc(it.label) + '</button>').join('') + '</div>';
+}
+
+// ---------- Situation ----------
+function sitHTML() {
+  const r = IND.find(x => x.id === state.ind);
+  const cs = M.filter(m => ['A', 'R'].includes(MX[r.id][m.id][0]));
+  const order = { A: 0, R: 1 };
+  cs.sort((a, b) => order[MX[r.id][a.id][0]] - order[MX[r.id][b.id][0]]);
+  const rest = M.filter(m => !cs.includes(m));
+  const shown = state.sitSel ? cs.filter(m => state.sitSel.includes(m.id)) : cs.slice(0, 4);
+  let h = '<div class="step">1. Situation clinique</div>' + chipsHTML(IND.map(x => ({ id: x.id, label: CHIP[x.id] })), [state.ind], 'data-ind') + '<p class="mini" style="margin-top:8px"><b>' + esc(r.label) + '</b></p>';
+  if (r.rep) h += '<p class="mini" style="margin-top:2px">' + esc(r.rep) + ' ' + srcTag(r.src) + '</p>';
+  h += '<div class="step">2. Options en France : ' + cs.length + ' molécule' + (cs.length > 1 ? 's' : '') + ' sur ' + M.length + '</div><div class="cand">' +
+    cs.map(m => { const c = MX[r.id][m.id]; return '<div class="cc" style="border-left-color:' + COL(m) + '"><h3><span style="color:' + COL(m) + '">&#9632;</span> ' + esc(m.name) + ' ' + badge(c[0]) + '</h3><span class="mini">' + esc(m.cls) + '</span><br>' + esc(c[1]) + ' ' + srcTag(c[2]) + '</div>'; }).join('') + '</div>';
+  h += '<div class="step">3. En quoi diffèrent-elles ?</div>';
+  if (cs.length > 4) h += '<p class="mini">Radar limité à 4 molécules par défaut : choisir celles à afficher.</p>';
+  if (cs.length > 1) h += chipsHTML(cs.map(m => ({ id: m.id, label: m.name, color: COL(m) })), shown.map(m => m.id), 'data-sitmol');
+  h += '<div class="rcard" style="margin-top:8px">' + (shown.length ? radar(pdSpec(shown)) + pdKey + legend(shown) : '<p class="small" style="padding:16px">Aucune molécule sélectionnée.</p>') + '</div>';
+  if (shown.length > 1) {
+    const rng = AXK.map(k => { const v = shown.map(m => SC[m.id][k][0]).filter(x => x !== null); return { k, lo: Math.min(...v), hi: Math.max(...v), n: v.length }; }).filter(x => x.n > 1).sort((a, b) => (b.hi - b.lo) - (a.hi - a.lo));
+    if (rng.length && rng[0].hi > rng[0].lo) {
+      const top = rng.filter(x => x.hi - x.lo === rng[0].hi - rng[0].lo).map(x => AXS[x.k][0] + ' (score ' + x.lo + ' à ' + x.hi + ')');
+      h += '<div class="gap"><b>Écart le plus marqué entre les molécules affichées :</b> ' + esc(top.join(' ; ')) + '.</div>';
+    }
+  }
+  h += '<details><summary>Sans indication citée dans cette situation (' + rest.length + ')</summary><div class="body"><dl>' + rest.map(m => { const c = MX[r.id][m.id]; return '<dt>' + esc(m.name) + ' ' + badge(c[0]) + '</dt><dd>' + esc(c[1]) + ' ' + srcTag(c[2]) + '</dd>'; }).join('') + '</dl></div></details>';
+  h += '<details><summary>Avant de prescrire : points à vérifier</summary><div class="body"><ul class="plain">' + CONF.checklist.map(t => '<li>' + esc(t) + '</li>').join('') + '</ul><p class="mini">Note fournie ' + srcTag(['S1']) + '</p></div></details>';
+  return h;
+}
+
+// ---------- Fiches ----------
+function ficHTML() {
+  const seg = '<div class="seg" role="group" aria-label="Type de radar"><button type="button" data-fview="pd" aria-pressed="' + (state.fview === 'pd') + '">Tolérance et interactions</button><button type="button" data-fview="ind" aria-pressed="' + (state.fview === 'ind') + '">Empreinte d\u2019indications</button></div>';
+  const key = state.fview === 'pd' ? pdKey : indKey;
+  const cards = M.map(m => {
+    const spec = state.fview === 'pd' ? pdSpec([m]) : indSpec([m]);
+    const amm = IND.filter(r => MX[r.id][m.id][0] === 'A').map(r => '<span class="badge b-A">' + esc(ISH[r.id][0]) + '</span>');
+    const oth = IND.filter(r => MX[r.id][m.id][0] === 'R').map(r => '<span class="badge b-R">' + esc(ISH[r.id][0]) + '</span>');
+    const d = RAW.DOSES.find(x => x[0] === m.id);
+    const als = RAW.ALERTS.filter(a => a[3].includes(m.id));
+    return '<article class="fcard" style="--c:' + COL(m) + '"><h3>' + esc(m.name) + '</h3><p class="sub">' + esc(m.cls) + '</p>' + radar(spec) +
+      '<div class="tags" aria-label="Indications AMM">' + (amm.length ? amm.join('') : '<span class="mini">Aucune AMM dans les situations couvertes</span>') + '</div>' +
+      (oth.length ? '<div class="tags" aria-label="Cité par la note">' + oth.join('') + '<span class="mini">cité par la note, AMM non vérifiée</span></div>' : '') +
+      '<details><summary>Pharmacocinétique et précautions</summary><div class="body"><p><b>Demi-vie :</b> ' + esc(SC[m.id].t12[2]) + '</p><p><b>Métabolisme :</b> ' + esc(RAW.PK[m.id].met) + '</p><p><b>Points cliniques :</b> ' + esc(RAW.PK[m.id].part) + ' ' + srcTag(RAW.PK[m.id].src) + '</p></div></details>' +
+      '<details><summary>Posologie (sources retenues)</summary><div class="body"><p>' + esc(d[1]) + ' ' + srcTag(d[2]) + '</p></div></details>' +
+      als.map(a => '<div class="alert"><h3>' + esc(a[0]) + '</h3><p class="mini" style="color:var(--ink)">Voir « Alertes en vigueur » en haut de page ' + srcTag(a[2]) + '</p></div>').join('') + '</article>';
+  }).join('');
+  return '<div class="step">Une fiche par molécule</div>' + seg + key + '<div class="grid g3" style="margin-top:8px">' + cards + '</div>';
+}
+
+// ---------- Comparer ----------
+function cmpHTML() {
+  const mols = M.filter(m => state.cmol.includes(m.id));
+  const seg = '<div class="ctrl-row"><div class="seg" role="group" aria-label="Mode"><button type="button" data-cmode="multi" aria-pressed="' + (state.cmode === 'multi') + '">Plusieurs molécules</button><button type="button" data-cmode="one" aria-pressed="' + (state.cmode === 'one') + '">Une seule</button></div><button type="button" class="btn" id="btn-all">Tout afficher</button></div>';
+  const chips = chipsHTML(M.map(m => ({ id: m.id, label: m.name, color: COL(m) })), state.cmol, 'data-cmol');
+  let h = '<div class="step">Superposer des molécules</div>' + seg + chips;
+  if (!mols.length) return h + '<p class="mini" style="margin-top:10px">Aucune molécule sélectionnée : choisir au moins une molécule.</p>';
+  h += '<div class="grid" style="margin-top:10px"><div class="rcard"><h3>' + esc(CONF.pdTitle) + '</h3>' + radar(pdSpec(mols)) + pdKey + legend(mols) + '</div>' +
+    '<div class="rcard"><h3>' + esc(CONF.indTitle) + '</h3>' + radar(indSpec(mols)) + indKey + legend(mols) + '</div></div>';
+  h += '<details><summary>Valeurs, fourchettes et règles de conversion</summary><div class="body"><dl>' + AXK.map(k => '<dt>' + esc(AXS[k][0]) + '</dt><dd class="mini">' + esc(RAW.AXES[k].rule) + '</dd><dd>' + mols.map(m => { const s = SC[m.id][k]; return '<div><b style="color:' + COL(m) + '">' + esc(m.name) + '</b> ' + (s[0] === null ? 'n.d.' : s[0] + '/4') + ' : ' + esc(s[2]) + (s[3] ? ' <span class="mini">(' + esc(s[3]) + ')</span>' : '') + ' ' + srcTag(s[4]) + '</div>'; }).join('') + '</dd>').join('') + '</dl></div></details>';
+  return h;
+}
+
+// ---------- Pied de page ----------
+function alertsHTML() {
+  return '<details class="alerts"><summary>' + esc(CONF.alertSummary) + '</summary><div class="body">' +
+    RAW.ALERTS.map(a => '<div class="alert"><h3>' + esc(a[0]) + '</h3><p>' + esc(a[1]) + ' ' + srcTag(a[2]) + '</p></div>').join('') + '</div></details>';
+}
+function readHTML() {
+  return '<details><summary>Comment lire un radar</summary><div class="body"><ul class="plain">' + CONF.read.map(t => '<li>' + esc(t) + '</li>').join('') + '</ul></div></details>';
+}
+function limitsHTML() {
+  const div = '<div class="wrap"><table><thead><tr><th>Point</th><th>Valeurs selon les sources</th><th>Traitement retenu</th><th>Sources</th></tr></thead><tbody>' +
+    RAW.DIVERG.map(d => '<tr><th scope="row">' + esc(d[0]) + '</th><td class="cell" style="min-width:240px">' + esc(d[1]) + '</td><td class="cell" style="min-width:220px">' + esc(d[2]) + '</td><td class="cell" style="min-width:90px">' + srcTag(d[3]) + '</td></tr>').join('') + '</tbody></table></div>';
+  const sel = '<dl>' + RAW.SELECTION.map(s => '<dt>' + esc(s[0]) + '</dt><dd>' + esc(s[1]) + ' <span class="mini">' + esc(s[2]) + '</span></dd>').join('') + '</dl><h3>Non retenus</h3><dl>' + RAW.EXCLUS.map(s => '<dt>' + esc(s[0]) + '</dt><dd>' + esc(s[1]) + '</dd>').join('') + '</dl>';
+  return '<h2 id="hyp-t">Hypothèse</h2><div class="hyp"><ul class="plain">' + RAW.HYPOTHESES.map(h => '<li>' + esc(h) + '</li>').join('') + '</ul></div>' +
+    '<h2>Divergences entre sources</h2>' + div +
+    '<details><summary>Périmètre et sélection des cinq groupes (' + CONF.selRefs + ')</summary><div class="body">' + sel + '</div></details>';
+}
+function sourcesHTML() {
+  const txt = ($('#panels').textContent + ' ' + $('#top').textContent + ' ' + $('#limits').textContent);
+  const ids = Array.from(new Set(txt.match(/S\d{1,2}(?!\d)/g) || [])).sort((a, b) => +a.slice(1) - +b.slice(1));
+  return '<h2 id="sources">Sources</h2><ol class="src">' + ids.map(id => '<li><b>' + id + '</b>' + esc(SRC[id] || 'SOURCE INCONNUE') + '</li>').join('') + '</ol>';
+}
+
+function render() {
+  const a = document.activeElement;
+  const attrs = ['data-ind', 'data-fview', 'data-cmode', 'data-cmol', 'data-sitmol'];
+  const key = a && a.hasAttribute ? (attrs.map(k => a.hasAttribute(k) ? '[' + k + '="' + a.getAttribute(k) + '"]' : '').find(x => x) || (a.id === 'btn-all' ? '#btn-all' : '')) : '';
+  $('#p-sit').innerHTML = sitHTML(); $('#p-fic').innerHTML = ficHTML(); $('#p-cmp').innerHTML = cmpHTML();
+  ['sit', 'fic', 'cmp'].forEach(t => { $('#p-' + t).hidden = state.tab !== t; $('#t-' + t).setAttribute('aria-selected', state.tab === t); $('#t-' + t).tabIndex = state.tab === t ? 0 : -1; });
+  $('#sources-box').innerHTML = sourcesHTML();
+  if (key) { const n = document.querySelector(key); if (n) n.focus(); }
+}
+
+function init() {
+  document.title = CONF.title;
+  $('#app').innerHTML =
+    '<div id="top"><h1>' + esc(CONF.title) + '</h1><p class="lead">' + esc(CONF.lead) + '</p>' + alertsHTML() + readHTML() + '</div>' +
+    '<div class="tabs" role="tablist" aria-label="Vues">' +
+      '<button type="button" role="tab" id="t-sit" data-tab="sit" aria-controls="p-sit">Par situation</button>' +
+      '<button type="button" role="tab" id="t-fic" data-tab="fic" aria-controls="p-fic">Fiches</button>' +
+      '<button type="button" role="tab" id="t-cmp" data-tab="cmp" aria-controls="p-cmp">Comparer</button></div>' +
+    '<div id="panels"><section id="p-sit" role="tabpanel" aria-labelledby="t-sit"></section><section id="p-fic" role="tabpanel" aria-labelledby="t-fic" hidden></section><section id="p-cmp" role="tabpanel" aria-labelledby="t-cmp" hidden></section></div>' +
+    '<div id="limits">' + limitsHTML() + '</div><div id="sources-box"></div>';
+  render();
+  document.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.tab) state.tab = b.dataset.tab;
+    else if (b.dataset.ind) { state.ind = b.dataset.ind; state.sitSel = null; }
+    else if (b.dataset.sitmol) {
+      const r = IND.find(x => x.id === state.ind);
+      const cs = M.filter(m => ['A', 'R'].includes(MX[r.id][m.id][0]));
+      const cur = state.sitSel || cs.slice(0, 4).map(m => m.id); const id = b.dataset.sitmol;
+      state.sitSel = cur.includes(id) ? cur.filter(x => x !== id) : cs.map(m => m.id).filter(x => cur.includes(x) || x === id);
+    }
+    else if (b.dataset.fview) state.fview = b.dataset.fview;
+    else if (b.dataset.cmode) { state.cmode = b.dataset.cmode; if (state.cmode === 'one') state.cmol = [state.cmol[0] || M[0].id]; }
+    else if (b.id === 'btn-all') { state.cmode = 'multi'; state.cmol = M.map(m => m.id); }
+    else if (b.dataset.cmol) { const id = b.dataset.cmol;
+      if (state.cmode === 'one') state.cmol = [id];
+      else state.cmol = state.cmol.includes(id) ? state.cmol.filter(x => x !== id) : M.map(m => m.id).filter(x => state.cmol.includes(x) || x === id); }
+    else return;
+    render();
+  });
+  document.querySelector('.tabs').addEventListener('keydown', e => {
+    const t = ['sit', 'fic', 'cmp']; const i = t.indexOf(state.tab);
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { state.tab = t[(i + (e.key === 'ArrowRight' ? 1 : 2)) % 3]; render(); $('#t-' + state.tab).focus(); }
+  });
+}
+
+window.__selfTest = function () {
+  const r = { errors: [] }; const err = m => r.errors.push(m);
+  M.forEach(m => { AXK.forEach(k => { const s = SC[m.id][k]; if (!s) return err('score manquant ' + m.id + k); if (s[0] !== null && !(s[0] >= 0 && s[0] <= 4)) err('hors échelle ' + m.id + k); s[4].forEach(x => { if (!SRC[x]) err('source inconnue ' + x); }); });
+    IND.forEach(i => { const c = MX[i.id] && MX[i.id][m.id]; if (!c) err('matrice incomplète ' + i.id + m.id); else c[2].forEach(x => { if (!SRC[x]) err('source inconnue ' + x); }); });
+    if (!RAW.PK[m.id]) err('PK manquant ' + m.id); if (!RAW.DOSES.find(d => d[0] === m.id)) err('dose manquante ' + m.id); });
+  const txt = $('#panels').textContent + ' ' + $('#top').textContent + ' ' + $('#limits').textContent;
+  const shown = new Set(txt.match(/S\d{1,2}(?!\d)/g) || []); const listed = new Set(Array.from(document.querySelectorAll('ol.src li b')).map(b => b.textContent));
+  shown.forEach(x => { if (!listed.has(x)) err('cité non listé ' + x); if (!SRC[x]) err('source inconnue ' + x); });
+  listed.forEach(x => { if (!shown.has(x)) err('listé non cité ' + x); });
+  r.listed = Array.from(listed);
+  r.polys = { sit: document.querySelectorAll('#p-sit svg polygon[data-poly]').length, fic: document.querySelectorAll('#p-fic svg polygon[data-poly]').length, cmp: document.querySelectorAll('#p-cmp svg polygon[data-poly]').length };
+  r.svgs = document.querySelectorAll('svg[role="img"]').length;
+  return r;
+};
+init();
+</script>
+</body>
+</html>

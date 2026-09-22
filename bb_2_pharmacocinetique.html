@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bêta-bloquants : lecture pharmacocinétique comparée</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#F6F8FA;--card:#FFFFFF;--ink:#15202B;--muted:#56626E;--line:#D5DBE1;--accent:#1F4E79;--accent-bg:#E5EEF7;--lab:#333333;
+--s-a-bg:#E2F1E9;--s-a-ink:#0B4F36;--s-r-bg:#E4ECF7;--s-r-ink:#163F6B;--s-c-bg:#FBEBD3;--s-c-ink:#6B3B00;--s-n-bg:#ECEEF0;--s-n-ink:#3F4750;--s-nd-ink:#56626E;
+--serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E151C;--card:#151F29;--ink:#E8EDF2;--muted:#A0ADB9;--line:#2B3844;--accent:#8DBBE8;--accent-bg:#1D2E40;--lab:#D3DAE1;
+--s-a-bg:#153A2B;--s-a-ink:#A9E3C7;--s-r-bg:#1B304A;--s-r-ink:#B4D2F2;--s-c-bg:#48310F;--s-c-ink:#F5D9A6;--s-n-bg:#222C36;--s-n-ink:#B7C1CB;--s-nd-ink:#A0ADB9}}
+:root[data-theme="dark"]{--bg:#0E151C;--card:#151F29;--ink:#E8EDF2;--muted:#A0ADB9;--line:#2B3844;--accent:#8DBBE8;--accent-bg:#1D2E40;--lab:#D3DAE1;
+--s-a-bg:#153A2B;--s-a-ink:#A9E3C7;--s-r-bg:#1B304A;--s-r-ink:#B4D2F2;--s-c-bg:#48310F;--s-c-ink:#F5D9A6;--s-n-bg:#222C36;--s-n-ink:#B7C1CB;--s-nd-ink:#A0ADB9}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5}
+main{max-width:1000px;margin:0 auto;padding:16px 14px 40px;overflow-wrap:anywhere}
+h1{font-family:var(--serif);font-size:1.55rem;line-height:1.2;margin:.2rem 0 .4rem;font-weight:700}
+h2{font-family:var(--serif);font-size:1.2rem;line-height:1.25;margin:1.8rem 0 .6rem;font-weight:700}
+h3{font-size:1rem;margin:1rem 0 .3rem}
+p{margin:.4rem 0}
+.lead{color:var(--muted);max-width:70ch;margin:0 0 .8rem}
+.small{font-size:.86rem;color:var(--muted)}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.ctrl{background:var(--bg);padding:8px 0 10px;border-bottom:1px solid var(--line);margin-bottom:6px}
+@media (min-width:760px){.ctrl{position:sticky;top:env(safe-area-inset-top,0px);z-index:5}}
+.ctrl-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.seg button{min-height:44px;padding:0 14px;border:0;background:transparent}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .seg button[aria-pressed="true"]{color:#0E151C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .seg button[aria-pressed="true"]{color:#0E151C}}
+.btn{min-height:44px;padding:0 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--card)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{min-height:44px;padding:0 12px;border:1.5px solid var(--line);border-radius:22px;background:var(--card);display:inline-flex;align-items:center;gap:8px}
+.chip[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-bg);font-weight:600}
+.chip .dot{width:14px;height:14px;border-radius:50%;display:inline-block;flex:none;border:2px solid transparent}
+.chip[aria-pressed="false"] .dot{opacity:.35}
+.wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+tr:last-child td,tr:last-child th{border-bottom:0}
+thead th{background:var(--card);font-weight:700;white-space:nowrap;position:sticky;top:0}
+tbody th{font-weight:600;min-width:130px;position:sticky;left:0;background:var(--card);z-index:1;border-right:1px solid var(--line)}
+td.cell{min-width:150px}
+.badge{display:inline-block;white-space:nowrap;flex:none;padding:1px 9px;border-radius:12px;font-weight:700;font-size:.8rem;border:1px solid transparent}
+.b-A{background:var(--s-a-bg);color:var(--s-a-ink)}
+.b-R{background:var(--s-r-bg);color:var(--s-r-ink)}
+.b-C{background:var(--s-c-bg);color:var(--s-c-ink)}
+.b-N{background:var(--s-n-bg);color:var(--s-n-ink)}
+.b-ND{background:transparent;color:var(--s-nd-ink);border:1px dashed var(--muted)}
+.note{display:block;color:var(--muted);font-size:.8rem;margin-top:3px;line-height:1.35}
+.repere{display:block;font-weight:400;color:var(--muted);font-size:.78rem;margin-top:3px}
+.list{display:grid;gap:8px}
+.item{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:10px 12px}
+.item h3{margin:0 0 4px;font-size:.98rem}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0;font-size:.84rem;color:var(--muted)}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.radars{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:760px){.radars.two{grid-template-columns:1fr 1fr}}
+.rcard{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:8px 8px 6px}
+.rcard h3{margin:4px 6px 0}
+.rcard svg{display:block;width:100%;height:auto;max-width:520px;margin:0 auto}
+.rcard .rlegend{display:flex;flex-wrap:wrap;gap:4px 12px;margin:2px 6px 6px;font-size:.8rem;color:var(--muted)}
+.rlegend i{display:inline-block;width:26px;height:0;border-top:3px solid;vertical-align:middle;margin-right:5px}
+details{border:1px solid var(--line);border-radius:10px;background:var(--card);margin:8px 0;padding:0 12px}
+summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
+details[open] summary{border-bottom:1px solid var(--line);margin-bottom:8px}
+details .body{padding:0 0 10px}
+dl{margin:.3rem 0}
+dt{font-weight:600;margin-top:.6rem}
+dd{margin:.1rem 0 0;color:var(--ink)}
+.src-id{font-size:.78rem;color:var(--muted);white-space:nowrap}
+ul.plain{margin:.3rem 0;padding-left:1.15rem}
+ul.plain li{margin:.25rem 0}
+ol.src{padding-left:0;list-style:none;margin:.4rem 0}
+ol.src li{margin:.55rem 0;padding-left:3.1rem;position:relative;font-size:.88rem;line-height:1.4}
+ol.src li b{position:absolute;left:0;top:0;min-width:2.6rem}
+.hyp{border-left:4px solid var(--accent);background:var(--card);padding:6px 14px;border-radius:0 10px 10px 0}
+.alert{border:1px solid var(--s-c-ink);border-radius:10px;background:var(--card);padding:10px 12px;margin:8px 0}
+.alert h3{margin:0 0 4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<!--sitenav-style-->
+<style>
+.sitenav{max-width:1000px;margin:0 auto;padding:12px 16px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.88rem;line-height:1.2}
+.sitenav a{color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:0 12px;min-height:36px;display:inline-flex;align-items:center}
+.sitenav a:hover{border-color:var(--muted)}
+.sitenav a:focus-visible{outline:2px solid var(--muted);outline-offset:2px}
+.sitenav a[aria-current="page"]{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:600}
+.sitenav .sn-label{color:var(--muted);font-weight:600;margin-right:4px}
+.sitenav a.sn-back{color:var(--muted);border-style:dashed}
+</style>
+<!--/sitenav-style-->
+</head>
+<body>
+<!--sitenav-->
+<nav class="sitenav" aria-label="Bêta-bloquants"><span class="sn-label">Bêta-bloquants :</span><a href="bb_synthese_prescripteurs.html">Synthèse prescripteurs</a><a href="bb_1_profils_compares.html">Profils comparés</a><a href="bb_3_profils_relatifs.html">Profils relatifs</a><a href="bb_2_pharmacocinetique.html" aria-current="page">Pharmacocinétique</a><a href="./" class="sn-back">← Retour</a></nav>
+<!--/sitenav-->
+<main id="app"></main>
+<script>
+const RAW = {"MOLS": [{"id": "bis", "name": "Bisoprolol", "color": "#0072B2", "dash": "0", "cls": "β1 sélectif"}, {"id": "met", "name": "Métoprolol", "color": "#D55E00", "dash": "6 3", "cls": "β1 sélectif (dose-dépendant)"}, {"id": "neb", "name": "Nébivolol", "color": "#009E73", "dash": "2 3", "cls": "β1 sélectif + NO"}, {"id": "pro", "name": "Propranolol", "color": "#CC79A7", "dash": "9 3 2 3", "cls": "non sélectif, lipophile"}, {"id": "car", "name": "Carvédilol", "color": "#E69F00", "dash": "1 4", "cls": "β non sélectif + α1"}, {"id": "lab", "name": "Labétalol", "color": "#333333", "dash": "5 2 1 2 1 2", "cls": "β non sélectif + α1"}], "AXES": {"sel": {"label": "Cardiosélectivité β1", "group": "pd", "rule": "0 = non sélectif (rapport β1/β2 proche de 1) ; 1 = faible ; 2 = modérée (ordre de 2 à 5 fois dans Baker 2005) ; 3 = élevée (14 fois et plus dans Baker 2005, ou nettement plus dans d'autres séries) ; 4 = très élevée (aucune molécule retenue). Score retenu = études expérimentales sur récepteurs humains (Baker 2005 et étude citée dans S7) ; les rapports plus élevés d'autres séries sont affichés comme fourchette et signalés comme divergences."}, "vaso": {"label": "Vasodilatation / blocage α1", "group": "pd", "rule": "0 = aucun effet vasodilatateur propre ; 2 = vasodilatation médiée par le monoxyde d'azote (nébivolol) ; 3 = blocage α1 (carvédilol, labétalol). Catégorie qualitative issue de la note fournie ; pas de mesure de puissance comparée."}, "cns": {"label": "Lipophilie / passage central", "group": "pd", "rule": "0 = hydrophile, passage central très faible ; 1 = faible ; 2 = modéré ; 3 = important ; 4 = très important. Catégories qualitatives (note fournie) ; aucune valeur de log P relevée."}, "t12": {"label": "Demi-vie", "group": "pk", "rule": "Règle appliquée au milieu de la fourchette publiée : moins de 6 h = 1 ; 6 à moins de 9 h = 2 ; 9 h et plus = 3 ; 20 h et plus = 4 (aucune molécule retenue). Une demi-vie de plasma courte ne préjuge pas de la durée d'effet (formes LP)."}, "ren": {"label": "Élimination rénale (inchangé)", "group": "pk", "rule": "0 = élimination à prédominance hépatique ou biliaire ; 2 = voies mixtes (environ la moitié rénale sous forme inchangée) ; 4 = à prédominance rénale (aucune molécule retenue). Point creux = part non chiffrée dans les sources retenues, tracée à 0 par convention."}, "cyp": {"label": "Dépendance CYP2D6", "group": "pk", "rule": "0 = non impliqué (glucuronidation) ; 1 = mineur (autre voie majeure : CYP3A4) ; 2 = modéré (plusieurs CYP dont 2D6) ; 3 = forte (métaboliseurs lents : demi-vie allongée) ; 4 = prédominante. Catégories dérivées de la note fournie et de Chan 2021 pour le bisoprolol."}}, "SC": {"bis": {"sel": [3, "dérivé", "≈ 14× (Baker 2005)", "14× (S5) à 103× (S6) ; plus sélectif que le métoprolol dans toutes les séries", ["S5", "S6", "S7"]], "vaso": [0, "dérivé", "aucun", "", ["S11"]], "cns": [2, "dérivé", "modérée", "« faible à modérée » (S11) ; « modérément lipophile » (S10)", ["S10", "S11"]], "t12": [3, "dérivé", "9–12 h", "10–12 h (S10)", ["S10", "S11"]], "ren": [2, "dérivé", "≈ 50 % rénal inchangé", "", ["S10", "S11"]], "cyp": [1, "dérivé", "CYP3A4 majoritaire, CYP2D6 mineur", "", ["S10"]]}, "met": {"sel": [2, "dérivé", "≈ 2× (étude citée dans S7)", "≈ 2× (S5, S7) à 74× (S6) ; sélectivité dose-dépendante (S11)", ["S5", "S6", "S7", "S11"]], "vaso": [0, "dérivé", "aucun", "", ["S11"]], "cns": [3, "dérivé", "importante", "", ["S11"]], "t12": [1, "dérivé", "3–7 h (LP : effet 24 h)", "", ["S11"]], "ren": [0, "dérivé", "hépatique ; métabolites rénaux", "", ["S11"]], "cyp": [4, "dérivé", "principalement CYP2D6", "", ["S11"]]}, "neb": {"sel": [3, "dérivé", "321× (S6)", "321× (S6) ; inférieure à celle du bisoprolol dans d'autres séries (S7) ; 3,5× celle du bisoprolol (S9)", ["S6", "S7", "S9"]], "vaso": [2, "dérivé", "via monoxyde d'azote", "", ["S11"]], "cns": [2, "dérivé", "modérée", "", ["S11"]], "t12": [3, "dérivé", "≈ 10–12 h (métaboliseurs rapides)", "plus longue chez les métaboliseurs lents (S11)", ["S11"]], "ren": [null, "dérivé", "élimination urinaire et fécale, part non chiffrée", "", ["S11"]], "cyp": [3, "dérivé", "CYP2D6 ; métabolites actifs", "", ["S11"]]}, "pro": {"sel": [0, "dérivé", "non sélectif", "", ["S11"]], "vaso": [0, "dérivé", "aucun", "", ["S11"]], "cns": [4, "dérivé", "très importante", "", ["S11"]], "t12": [1, "dérivé", "3–6 h (plus long en LP)", "", ["S11"]], "ren": [0, "dérivé", "hépatique ; métabolites urinaires", "", ["S11"]], "cyp": [2, "dérivé", "CYP2D6, 1A2, 2C19", "", ["S11"]]}, "car": {"sel": [0, "dérivé", "β1/β2 ≈ 1:1", "", ["S3", "S6"]], "vaso": [3, "dérivé", "blocage α1", "", ["S3", "S11"]], "cns": [3, "dérivé", "importante", "", ["S11"]], "t12": [2, "dérivé", "6–10 h", "", ["S11"]], "ren": [0, "dérivé", "surtout biliaire / fécale", "", ["S11"]], "cyp": [2, "dérivé", "CYP2D6, 2C9", "", ["S11"]]}, "lab": {"sel": [0, "dérivé", "non sélectif", "", ["S11"]], "vaso": [3, "dérivé", "blocage α1", "", ["S11"]], "cns": [2, "dérivé", "modérée", "", ["S11"]], "t12": [2, "dérivé", "5–8 h", "", ["S11"]], "ren": [0, "dérivé", "hépatique ; glucuronidation", "", ["S11"]], "cyp": [0, "dérivé", "glucuronidation, non CYP", "", ["S11"]]}}, "SRC": {"S1": "ANSM / Base de données publique des médicaments. Résumés des caractéristiques du produit en vigueur : PROPRANOLOL ARROW 40 mg et ACCORD 40 mg ; BISOPROLOL ACCORD HEALTHCARE (RCP ANSM du 08/09/2025), SANDOZ 10 mg, ZENTIVA K.S. ; NEBIVOLOL ARROW LAB, EG et SANDOZ 5 mg ; KREDEX et génériques ; TRANDATE 200 mg (RCP du 16/03/2026) et 5 mg/ml ; SELOKEN 100 mg. base-donnees-publique.medicaments.gouv.fr, consulté le 21/09/2026.", "S2": "Haute Autorité de santé, Commission de la transparence. Avis PROPRANOLOL ARROW (inscription), 23/10/2019 : SMR important, faible dans le tremblement essentiel. has-sante.fr/jcms/p_3117103, consulté le 21/09/2026.", "S3": "ANSM. Protocole d'utilisation thérapeutique et de suivi des patients, cadre de prescription compassionnelle carvédilol 6,25 et 12,5 mg, 12/11/2025 (document du 17/11/2025). ansm.sante.fr/uploads/2025/11/17/20251117-cpc-carvedilol-put-sp.pdf, consulté le 21/09/2026.", "S4": "Vidal. « Des mesures pour compenser les perturbations en propranolol 40 mg per os », d'après l'ANSM, décembre 2025. vidal.fr/actualites/37308, consulté le 21/09/2026.", "S5": "Baker JG. The selectivity of β-adrenoceptor antagonists at the human β1, β2 and β3 adrenoceptors. Br J Pharmacol. 2005;144(3):317-322. doi:10.1038/sj.bjp.0706048.", "S6": "Lettre à l'éditeur. Effectiveness and safety of four different beta-blockers in patients with chronic heart failure (rapports d'affinité β1/β2 : bisoprolol, métoprolol, nébivolol, carvédilol). PMC9823244, consulté le 21/09/2026.", "S7": "Therapeutic Properties of Highly Selective β-blockers With or Without Additional Vasodilator Properties: Focus on Bisoprolol and Nebivolol in Patients With Cardiovascular Disease. PMC9519665, consulté le 21/09/2026.", "S8": "Beta-blocker choice and exchangeability in patients with heart failure and chronic obstructive pulmonary disease: an Italian register-based cohort study. PMC6685956, consulté le 21/09/2026.", "S9": "Comparison of Nebivolol and Bisoprolol for Cardiovascular Mortality in Hypertensive Patients (essai randomisé ouvert, Nawabshah, Pakistan). PMC6977581, consulté le 21/09/2026.", "S10": "Chan SW, Chu TTW, Ho CS, Kong APS, Tomlinson B, Zeng W. Influence of CYP2D6 and CYP3A5 polymorphisms on the pharmacokinetics and pharmacodynamics of bisoprolol in hypertensive Chinese patients. Front Med. 2021;8:683498. doi:10.3389/fmed.2021.683498.", "S11": "Note de synthèse « Bêta-bloquants principaux par indication » fournie par AF (septembre 2026), fondée sur : ESC 2021 insuffisance cardiaque (doi:10.1093/eurheartj/ehab368) ; ESC 2024 fibrillation atriale (ehae176) ; ESC 2024 syndromes coronariens chroniques (ehae177) ; ESC 2023 syndromes coronariens aigus (ehad191) ; ESC 2024 hypertension (ehae178) ; ESC 2025 grossesse (ehaf193) ; StatPearls (NBK532906, NBK557801, NBK448097, NBK499982). Valeurs pharmacocinétiques et de lipophilie reprises telles quelles, non recoupées avec les RCP ni relues à la source.", "S12": "Vidal. Fiche DCI nébivolol (chlorhydrate) 5 mg, révision du 14/03/2025 : indications et posologie. vidal.fr/medicaments/substances/nebivolol-16986.html, consulté le 21/09/2026.", "S13": "Vidal et catalogue de médicaments (source secondaire, ancienneté variable, à recouper avec le RCP en vigueur) : SELOKEN LP 200 mg (HTA, angor d'effort, migraine) ; SELOZOK LP, classé en insuffisance cardiaque. consulté le 21/09/2026.", "S14": "Assurance Maladie. Open Medic : base complète sur les dépenses de médicaments, 2014 à 2025. assurance-maladie.ameli.fr/etudes-et-donnees/open-medic-base-complete-depenses-medicaments, page consultée le 21/09/2026 ; les volumes par molécule n'ont pas été extraits.", "S15": "pharmacomedicale.org. Médicaments bêta-bloquants (indications en insuffisance cardiaque chronique : carvédilol, bisoprolol, métoprolol, nébivolol ; premier passage hépatique du propranolol). consulté le 21/09/2026.", "S16": "Agence fédérale des médicaments et des produits de santé (Belgique). RCP Kredex 25 mg : HTA essentielle, insuffisance cardiaque chronique, angine de poitrine chronique. app.fagg-afmps.be, consulté le 21/09/2026."}, "STAT": {"A": "AMM", "R": "Reco.", "C": "CPC", "N": "Non", "ND": "n.d."}, "ROWS": [["hta", "Hypertension artérielle", "Les bêta-bloquants ne sont pas de première intention dans l'HTA non compliquée (ESC 2024, via note fournie).", ["S11"]], ["cor", "Angor stable, post-infarctus", "Bénéfice pronostique surtout après infarctus avec dysfonction ventriculaire gauche ou insuffisance cardiaque (ESC 2023 et 2024, via note fournie).", ["S11"]], ["ic", "Insuffisance cardiaque à fraction d'éjection réduite", "Bisoprolol, carvédilol, métoprolol succinate LP ; nébivolol chez le sujet âgé (ESC 2021, via note fournie).", ["S11", "S15"]], ["fa", "Fibrillation atriale : contrôle de fréquence", "Bêta-bloquant en première intention du contrôle de fréquence (ESC 2024, via note fournie).", ["S11"]], ["mig", "Migraine : traitement de fond", "", []], ["tre", "Tremblement essentiel", "Service médical rendu faible pour le propranolol (HAS).", ["S2"]], ["por", "Hypertension portale : prévention hémorragique", "Baveno VII : carvédilol non sélectif préférentiel en cirrhose compensée (argumentaire du CPC).", ["S3"]], ["thy", "Hyperthyroïdie : manifestations adrénergiques", "", []], ["gro", "Grossesse : HTA gravidique", "Point traité uniquement via la note fournie (ESC 2025) : à confirmer avant usage.", ["S11"]]], "MX": {"hta": {"bis": ["A", "RCP variable selon la spécialité : HTA + angor, ou HTA + angor + IC, ou IC seule.", ["S1"]], "met": ["A", "Seloken 100 mg ; Seloken LP 200 mg.", ["S1", "S13"]], "neb": ["A", "HTA essentielle.", ["S1", "S12"]], "pro": ["A", "Hypertension artérielle.", ["S1"]], "car": ["N", "AMM France limitée à l'insuffisance cardiaque.", ["S1", "S3"]], "lab": ["A", "Comprimé 200 mg : hypertension artérielle.", ["S1"]]}, "cor": {"bis": ["A", "Angor chronique stable (selon la spécialité).", ["S1"]], "met": ["A", "Angor d'effort ; long cours après infarctus (Seloken 100 mg).", ["S1"]], "neb": ["N", "Absent des RCP consultés.", ["S1", "S12"]], "pro": ["A", "Angine de poitrine ; prévention après infarctus.", ["S1"]], "car": ["R", "Coronaropathie avec dysfonction VG (ESC, via note) ; hors AMM France.", ["S3", "S11"]], "lab": ["N", "Absent du RCP consulté.", ["S1"]]}, "ic": {"bis": ["A", "IC chronique stable avec fonction systolique réduite.", ["S1"]], "met": ["A", "Succinate LP (Selozok) classé en IC ; libellé exact à confirmer sur le RCP.", ["S13", "S15"]], "neb": ["A", "IC stable légère à modérée, à partir de 70 ans.", ["S1", "S12"]], "pro": ["N", "Absent des RCP consultés.", ["S1"]], "car": ["A", "IC stable légère à sévère (FE ≤ 35 %).", ["S1", "S3"]], "lab": ["N", "Absent du RCP consulté.", ["S1"]]}, "fa": {"bis": ["R", "Contrôle de fréquence recommandé (ESC 2024, via note) ; hors AMM.", ["S11"]], "met": ["A", "AMM au libellé large : certains troubles du rythme (Seloken 100 mg).", ["S1"]], "neb": ["R", "Cité pour le contrôle de fréquence (via note) ; hors AMM.", ["S11"]], "pro": ["A", "Arythmie cardiaque supraventriculaire.", ["S1"]], "car": ["R", "Surtout si IC ou HTA associée (via note) ; hors AMM.", ["S11"]], "lab": ["N", "Absent du RCP consulté.", ["S1"]]}, "mig": {"bis": ["N", "Absent des RCP consultés.", ["S1"]], "met": ["A", "Seloken LP 200 mg (source secondaire, à recouper avec le RCP en vigueur).", ["S13"]], "neb": ["N", "Absent des RCP consultés.", ["S1"]], "pro": ["A", "Traitement de fond de la migraine.", ["S1"]], "car": ["N", "Absent des RCP consultés.", ["S1"]], "lab": ["N", "Absent du RCP consulté.", ["S1"]]}, "tre": {"bis": ["N", "Absent des RCP consultés.", ["S1"]], "met": ["N", "Absent des RCP consultés.", ["S1"]], "neb": ["N", "Absent des RCP consultés.", ["S1"]], "pro": ["A", "Tremblement essentiel ; SMR faible.", ["S1", "S2"]], "car": ["N", "Absent des RCP consultés.", ["S1"]], "lab": ["N", "Absent du RCP consulté.", ["S1"]]}, "por": {"bis": ["N", "Absent des RCP consultés.", ["S1"]], "met": ["N", "Absent des RCP consultés.", ["S1"]], "neb": ["N", "Absent des RCP consultés.", ["S1"]], "pro": ["A", "Prévention des hémorragies digestives par rupture de varices ; 40 mg en tension d'approvisionnement.", ["S1", "S4"]], "car": ["C", "Cadre de prescription compassionnelle ANSM (12/11/2025), prescription réservée aux hépato-gastro-entérologues.", ["S3"]], "lab": ["N", "Absent du RCP consulté.", ["S1"]]}, "thy": {"bis": ["N", "Absent des RCP consultés.", ["S1"]], "met": ["N", "Absent des RCP consultés.", ["S1"]], "neb": ["N", "Absent des RCP consultés.", ["S1"]], "pro": ["A", "Hyperthyroïdie et thyrotoxicose.", ["S1"]], "car": ["N", "Absent des RCP consultés.", ["S1"]], "lab": ["N", "Absent du RCP consulté.", ["S1"]]}, "gro": {"bis": ["ND", "Non traité dans la note fournie.", ["S11"]], "met": ["R", "Contexte cardiaque ou rythmologique (via note).", ["S11"]], "neb": ["ND", "Non traité dans la note fournie.", ["S11"]], "pro": ["R", "Selon l'indication (via note).", ["S11"]], "car": ["ND", "Non traité dans la note fournie.", ["S11"]], "lab": ["R", "Usage recommandé (ESC 2025, via note) ; RCP oral : HTA ; RCP injectable : certaines pré-éclampsies graves.", ["S1", "S11"]]}}, "SELECTION": [["Bisoprolol", "Molécule de référence en HTA, angor et insuffisance cardiaque ; contrôle de fréquence dans la fibrillation atriale (recommandé, hors AMM).", "Volume global présumé élevé, non chiffré."], ["Métoprolol", "Insuffisance cardiaque (succinate LP), angor, post-infarctus, troubles du rythme, migraine (forme LP).", "Deux familles de spécialités (tartrate, succinate) aux indications différentes."], ["Nébivolol", "HTA et insuffisance cardiaque du sujet de 70 ans et plus (RCP).", "Profil vasodilatateur ; comparaison directe avec le bisoprolol."], ["Propranolol", "Migraine, tremblement essentiel, hypertension portale, hyperthyroïdie, arythmie supraventriculaire.", "Leader d'indication même si le volume global est inférieur ; tension d'approvisionnement signalée en décembre 2025."], ["Carvédilol", "Seule AMM française : insuffisance cardiaque ; hypertension portale via un cadre de prescription compassionnelle (2025).", "Bêta-bloquant non sélectif avec blocage α1."], ["Labétalol", "HTA ; HTA gravidique et urgences hypertensives (voie injectable hospitalière).", "Leader d'indication en grossesse selon la note fournie ; volume ambulatoire non chiffré."]], "EXCLUS": [["Aténolol", "Cité dans la note fournie (HTA, FA, coronaropathie) ; volume non chiffré. À réintégrer si Open Medic le place devant le carvédilol ou le labétalol."], ["Sotalol", "Antiarythmique de classe III, non couvert par la note fournie."], ["Acébutolol, céliprolol", "Bêta-bloquants à activité sympathomimétique intrinsèque, non couverts par la note fournie."], ["Nadolol, timolol", "Commercialisation française des formes orales non vérifiée ; timolol : collyres exclus du périmètre."], ["Esmolol, landiolol", "Voie intraveineuse hospitalière, hors périmètre officinal."]], "PK": {"bis": {"met": "Environ 50 % hépatique (CYP3A4 majoritaire, CYP2D6 mineur), métabolites inactifs.", "el": "Environ 50 % éliminé inchangé par le rein ; le reste sous forme de métabolites inactifs.", "part": "Adapter à la fonction rénale chez le sujet âgé ou insuffisant rénal (note fournie).", "src": ["S10", "S11"]}, "met": {"met": "Hépatique, principalement CYP2D6.", "el": "Métabolites rénaux.", "part": "Cirrhose : biodisponibilité augmentée par baisse de clairance ; surveiller la fréquence cardiaque (RCP Seloken 100 mg). Sélectivité β1 dose-dépendante.", "src": ["S1", "S11"]}, "neb": {"met": "Hépatique, CYP2D6 ; métabolites actifs.", "el": "Voies urinaire et fécale, part non chiffrée.", "part": "Demi-vie plus longue chez les métaboliseurs lents CYP2D6.", "src": ["S11"]}, "pro": {"met": "Hépatique important (CYP2D6, 1A2, 2C19) ; premier passage élevé avec métabolites actifs.", "el": "Métabolites urinaires.", "part": "Passage central important : fatigue, troubles du sommeil, cauchemars à surveiller (note fournie).", "src": ["S11", "S15"]}, "car": {"met": "Hépatique important (CYP2D6, 2C9).", "el": "Surtout biliaire et fécale.", "part": "Cirrhose : exposition (ASC) multipliée par 6,8 par rapport aux sujets sains ; contre-indiqué en cas de dysfonction hépatique clinique dans l'AMM, dérogation dans le CPC.", "src": ["S3", "S11"]}, "lab": {"met": "Hépatique, glucuronidation.", "el": "Non chiffrée dans les sources retenues.", "part": "Non documenté dans les RCP français consultés.", "src": ["S1", "S11"]}}, "DOSES": [["bis", "HTA, angor : 5 mg/j, puis 10 mg/j ; maximum recommandé 20 mg/j. Insuffisance cardiaque : titration progressive (valeurs non relevées).", ["S1"]], ["met", "Seloken LP 200 mg : 1 comprimé le matin (source secondaire). Autres posologies (succinate, IC) non relevées.", ["S13"]], ["neb", "HTA : 5 mg/j ; dose initiale 2,5 mg/j entre 65 et 70 ans ; maximum 10 mg/j. Insuffisance cardiaque : titration progressive.", ["S1", "S12"]], ["pro", "HTA : 40 mg deux ou trois fois par jour, jusqu'à 80 mg par paliers hebdomadaires ; plage usuelle 160 à 320 mg/j.", ["S1"]], ["car", "IC : dose initiale 3,125 mg deux fois par jour, titration progressive (cible non relevée). CPC hypertension portale : 3,125 mg deux fois par jour, puis 6,25 mg deux fois par jour ; maximum 12,5 mg/j.", ["S1", "S3"]], ["lab", "Comprimé 200 mg : 1 comprimé matin et soir (HTA).", ["S1"]]], "DIVERG": [["Cardiosélectivité β1/β2", "Bisoprolol ≈ 14× (Baker 2005, S5) et métoprolol ≈ 2× (étude expérimentale citée dans S7) ; bisoprolol 103×, métoprolol 74×, nébivolol 321×, carvédilol ≈ 1 (S6) ; bisoprolol 20 fois plus sélectif que le métoprolol (S8) ; nébivolol 3,5 fois plus sélectif que le bisoprolol (S9) ; bisoprolol plus sélectif que le nébivolol dans d'autres séries (S7).", "Score fondé sur les études expérimentales sur récepteurs humains (S5, S7). Le classement bisoprolol > métoprolol est constant ; bisoprolol contre nébivolol est contradictoire : les deux sont notés 3.", ["S5", "S6", "S7", "S8", "S9"]], ["Lipophilie du bisoprolol", "« Faible à modérée » (S11) ou « modérément lipophile » (S10).", "Score 2 (modérée), compatible avec les deux formulations.", ["S10", "S11"]], ["Indications du RCP du bisoprolol", "HTA + angor (Accord) ; HTA + angor + IC (Sandoz) ; IC seule (Zentiva K.S.).", "Le libellé dépend de la spécialité : vérifier le RCP de la référence délivrée.", ["S1"]], ["Indications du carvédilol selon le pays", "France : insuffisance cardiaque seule. Belgique : HTA, insuffisance cardiaque et angor chronique.", "Le statut « Non » en HTA et angor vaut pour la France uniquement.", ["S1", "S3", "S16"]], ["Indications du métoprolol selon la forme", "Seloken 100 mg : HTA, angor, long cours après infarctus, troubles du rythme, manifestations fonctionnelles cardiaques. Seloken LP 200 mg : HTA, angor d'effort, migraine. Succinate LP : classé en insuffisance cardiaque.", "Le métoprolol est affiché en une seule entrée ; les indications sont celles de la famille de spécialités.", ["S1", "S13", "S15"]], ["Hypertension portale : propranolol ou carvédilol", "L'AMM du propranolol couvre la prévention des hémorragies par rupture de varices ; en contexte de tension d'approvisionnement, la mesure relayée en décembre 2025 recommande de préférer le carvédilol pour cette indication.", "Les deux statuts sont affichés (AMM pour le propranolol, CPC pour le carvédilol) ; l'état de l'approvisionnement en septembre 2026 est à vérifier auprès de l'ANSM.", ["S1", "S3", "S4"]]], "ALERTS": [["Propranolol 40 mg per os : tension d'approvisionnement", "Ruptures et contingentement en ville signalés en décembre 2025 ; remise à disposition annoncée courant 2026. Réserver les unités aux femmes allaitantes et aux enfants avec QT long congénital ou tachycardie ventriculaire polymorphe catécholergique ; les dosages LP 80 et 160 mg et les formes buvable et injectable restent disponibles. Situation en septembre 2026 non vérifiée.", ["S4"]], ["Carvédilol : cadre de prescription compassionnelle (CPC) ANSM du 12/11/2025", "Indications : prévention de la décompensation hépatique en hypertension portale cliniquement significative ; prophylaxie secondaire de la rupture de varice. Prescription réservée aux hépato-gastro-entérologues, avec la mention « Prescription au titre d'un accès compassionnel en dehors du cadre d'une autorisation de mise sur le marché ». Le pharmacien dispense sur prescription et déclare tout effet indésirable au CRPV en mentionnant le CPC.", ["S3"]]], "HYPOTHESES": ["Périmètre : six entrées retenues à partir de la note fournie et des RCP. Aucun classement par volume de délivrance n'a été établi : les fichiers Open Medic n'ont pas été extraits (S14). L'aténolol et le sotalol sont susceptibles d'y figurer.", "Les scores de 0 à 4 sont ordinaux, dérivés de règles affichées sous chaque graphique. Ils ne mesurent ni l'efficacité ni la tolérance clinique et ne doivent pas être additionnés.", "Les demi-vies, voies métaboliques et niveaux de lipophilie proviennent de la note fournie (S11), non recoupée avec les RCP ; seuls le bisoprolol (S10) et le carvédilol (S3) sont documentés par une source primaire complémentaire.", "Le statut « Reco. » (recommandé hors AMM) repose sur les recommandations ESC citées dans la note (S11) et n'a pas été relu à la source.", "Un point creux sur un radar signale une donnée non documentée, tracée à 0 par convention.", "Les statuts « Non » valent pour les RCP consultés (S1) et peuvent varier selon la spécialité délivrée.", "Hors périmètre : formes pédiatriques, collyres, voie intraveineuse hospitalière.", "Outil d'information destiné aux professionnels de santé ; il ne constitue ni une recommandation de prescription ni une aide à la substitution."]};
+const PAGE = {"title": "Bêta-bloquants : lecture pharmacocinétique comparée", "lead": "Demi-vie, métabolisme et voies d'élimination des six bêta-bloquants, avec les particularités en insuffisance hépatique ou rénale documentées.", "sections": ["pk", "radars"], "radarTitle": "Profil pharmacocinétique", "radars": [{"id": "r-pk", "keys": ["t12", "ren", "cyp"], "title": "Demi-vie, élimination rénale, dépendance CYP2D6"}]};
+const M = RAW.MOLS, AX = RAW.AXES, SC = RAW.SC, SRC = RAW.SRC;
+const COL = m => m.id === 'lab' ? 'var(--lab)' : m.color;
+const state = { mode: 'multi', sel: M.map(m => m.id) };
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const srcTag = a => a && a.length ? '<span class="src-id">[' + a.join(', ') + ']</span>' : '';
+const selMols = () => M.filter(m => state.sel.includes(m.id));
+
+function selectorHTML() {
+  return '<div class="ctrl" role="group" aria-label="Sélection des molécules">' +
+    '<div class="ctrl-row">' +
+      '<div class="seg" role="group" aria-label="Mode d\u2019affichage">' +
+        '<button type="button" data-mode="multi" aria-pressed="' + (state.mode==='multi') + '">Plusieurs molécules</button>' +
+        '<button type="button" data-mode="one" aria-pressed="' + (state.mode==='one') + '">Une seule</button>' +
+      '</div>' +
+      '<button type="button" class="btn" id="btn-all">Tout afficher</button>' +
+    '</div>' +
+    '<div class="chips">' + M.map(m =>
+      '<button type="button" class="chip" data-mol="' + m.id + '" aria-pressed="' + state.sel.includes(m.id) + '">' +
+      '<span class="dot" style="background:' + COL(m) + '"></span>' + esc(m.name) + '</button>').join('') +
+    '</div></div>';
+}
+
+function radarSVG(keys, mols, title) {
+  const W = 400, H = 290, cx = 200, cy = 158, R = 92, MAX = 4, n = keys.length;
+  const ang = i => -Math.PI/2 + 2*Math.PI*i/n;
+  const P = (i, v) => [cx + R*(v/MAX)*Math.cos(ang(i)), cy + R*(v/MAX)*Math.sin(ang(i))];
+  let g = '';
+  for (let r = 1; r <= MAX; r++) {
+    g += '<polygon points="' + keys.map((k,i) => P(i, r).map(x => x.toFixed(1)).join(',')).join(' ') + '" fill="none" style="stroke:var(--line)" stroke-width="1"/>';
+  }
+  keys.forEach((k, i) => {
+    const [x, y] = P(i, MAX);
+    g += '<line x1="' + cx + '" y1="' + cy + '" x2="' + x.toFixed(1) + '" y2="' + y.toFixed(1) + '" style="stroke:var(--line)" stroke-width="1"/>';
+    const lx = cx + (R+14)*Math.cos(ang(i)), ly = cy + (R+14)*Math.sin(ang(i));
+    const c = Math.cos(ang(i)), s = Math.sin(ang(i));
+    const anchor = c > 0.3 ? 'start' : (c < -0.3 ? 'end' : 'middle');
+    const words = AX[k].label.split(' '); const lines = []; let cur = '';
+    words.forEach(w => { if ((cur + ' ' + w).trim().length > 13 && cur) { lines.push(cur); cur = w; } else cur = (cur + ' ' + w).trim(); });
+    lines.push(cur);
+    const y0 = ly + (s > 0.4 ? 6 : (s < -0.4 ? -4 - (lines.length-1)*13 : 4 - (lines.length-1)*6));
+    g += '<text x="' + lx.toFixed(1) + '" y="' + y0.toFixed(1) + '" text-anchor="' + anchor + '" font-size="13.5" style="fill:var(--ink)">' +
+      lines.map((t, j) => '<tspan x="' + lx.toFixed(1) + '" dy="' + (j ? 14 : 0) + '">' + esc(t) + '</tspan>').join('') + '</text>';
+  });
+  [2, 4].forEach(r => { const [x, y] = P(0, r); g += '<text x="' + (x+4).toFixed(1) + '" y="' + (y+3).toFixed(1) + '" font-size="11" style="fill:var(--muted)">' + r + '</text>'; });
+  mols.forEach(m => {
+    const pts = keys.map((k, i) => { const v = SC[m.id][k][0]; return P(i, v === null ? 0 : v); });
+    const ps = pts.map(p => p.map(x => x.toFixed(1)).join(',')).join(' ');
+    g += '<polygon data-poly="' + m.id + '" points="' + ps + '" style="fill:' + COL(m) + ';stroke:' + COL(m) + '" fill-opacity="0.09" stroke-width="2.2" stroke-dasharray="' + m.dash + '" stroke-linejoin="round"/>';
+    keys.forEach((k, i) => {
+      const v = SC[m.id][k][0], p = pts[i];
+      g += v === null
+        ? '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="4" style="fill:var(--card);stroke:' + COL(m) + '" stroke-width="2"><title>' + esc(m.name + ' : ' + AX[k].label + ' non documenté') + '</title></circle>'
+        : '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="3.2" style="fill:' + COL(m) + '"><title>' + esc(m.name + ' : ' + AX[k].label + ' ' + v + '/4') + '</title></circle>';
+    });
+  });
+  return '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(title) + '"><desc>' + esc(title + ' — échelle de 0 au centre à 4 au bord. ' + mols.map(m => m.name + ' : ' + keys.map(k => AX[k].label + ' ' + (SC[m.id][k][0] === null ? 'non documenté' : SC[m.id][k][0])).join(', ')).join(' ; ')) + '</desc>' + g + '</svg>';
+}
+
+function radarCard(id, keys, title) {
+  const mols = selMols();
+  const leg = mols.map(m => '<span><i style="border-color:' + COL(m) + ';border-top-style:' + (m.dash === '0' ? 'solid' : 'dashed') + '"></i>' + esc(m.name) + '</span>').join('');
+  const vals = mols.map(m => '<dt><span style="color:' + COL(m) + '">&#9632;</span> ' + esc(m.name) + '</dt><dd>' +
+    keys.map(k => { const s = SC[m.id][k];
+      return '<div><b>' + esc(AX[k].label) + ' : ' + (s[0] === null ? 'n.d.' : s[0] + '/4') + '</b> — ' + esc(s[2]) + (s[3] ? ' <span class="note" style="display:inline">Fourchette / divergence : ' + esc(s[3]) + '</span>' : '') + ' <span class="src-id">(' + s[1] + ') [' + s[4].join(', ') + ']</span></div>'; }).join('') + '</dd>').join('');
+  const rules = keys.map(k => '<dt>' + esc(AX[k].label) + '</dt><dd>' + esc(AX[k].rule) + '</dd>').join('');
+  return '<div class="rcard" id="' + id + '"><h3>' + esc(title) + '</h3>' +
+    (mols.length ? radarSVG(keys, mols, title) : '<p class="small" style="padding:20px">Aucune molécule sélectionnée : choisir au moins une molécule ci-dessus.</p>') +
+    '<div class="rlegend">' + leg + '</div>' +
+    '<details><summary>Échelle et règle de conversion</summary><div class="body"><p class="small">0 au centre, 4 au bord. Point creux : donnée non documentée, tracée à 0.</p><dl>' + rules + '</dl></div></details>' +
+    '<details><summary>Valeurs, fourchettes et sources</summary><div class="body"><dl>' + vals + '</dl></div></details></div>';
+}
+
+function matrixHTML() {
+  const mols = selMols();
+  const badge = (st) => '<span class="badge b-' + st + '">' + RAW.STAT[st] + '</span>';
+  const legend = '<div class="legend"><span>' + badge('A') + ' AMM française (RCP consultés)</span><span>' + badge('R') + ' recommandé hors AMM (note fournie, non relu à la source)</span><span>' + badge('C') + ' cadre de prescription compassionnelle ANSM</span><span>' + badge('N') + ' absent des RCP consultés</span><span>' + badge('ND') + ' non documenté</span></div>';
+  if (state.mode === 'one' && mols.length === 1) {
+    const m = mols[0];
+    return legend + '<div class="list">' + RAW.ROWS.map(r => { const c = RAW.MX[r[0]][m.id];
+      return '<div class="item"><h3>' + esc(r[1]) + '</h3>' + badge(c[0]) + ' <span class="note" style="display:inline">' + esc(c[1]) + ' ' + srcTag(c[2]) + '</span></div>'; }).join('') + '</div>';
+  }
+  if (!mols.length) return '<p class="small">Aucune molécule sélectionnée.</p>';
+  return legend + '<div class="wrap"><table><thead><tr><th>Indication</th>' + mols.map(m => '<th><span style="color:' + COL(m) + '">&#9632;</span> ' + esc(m.name) + '</th>').join('') + '</tr></thead><tbody>' +
+    RAW.ROWS.map(r => '<tr><th scope="row">' + esc(r[1]) + (r[2] ? '<span class="repere">' + esc(r[2]) + ' ' + srcTag(r[3]) + '</span>' : '') + '</th>' +
+      mols.map(m => { const c = RAW.MX[r[0]][m.id]; return '<td class="cell">' + badge(c[0]) + '<span class="note">' + esc(c[1]) + ' ' + srcTag(c[2]) + '</span></td>'; }).join('') + '</tr>').join('') +
+    '</tbody></table></div>';
+}
+
+function alertsHTML() {
+  return RAW.ALERTS.map(a => '<div class="alert"><h3>' + esc(a[0]) + '</h3><p>' + esc(a[1]) + ' ' + srcTag(a[2]) + '</p></div>').join('');
+}
+
+function selectionHTML() {
+  return '<details><summary>Périmètre et sélection des six entrées</summary><div class="body">' +
+    '<p class="small">Sélection fondée sur la note fournie et les RCP (S11, S1). Classement par volume de délivrance non établi : Open Medic n\u2019a pas été extrait (S14).</p>' +
+    '<dl>' + RAW.SELECTION.map(s => '<dt>' + esc(s[0]) + '</dt><dd>' + esc(s[1]) + ' <span class="note" style="display:inline">' + esc(s[2]) + '</span></dd>').join('') + '</dl>' +
+    '<h3>Non retenus</h3><dl>' + RAW.EXCLUS.map(s => '<dt>' + esc(s[0]) + '</dt><dd>' + esc(s[1]) + '</dd>').join('') + '</dl></div></details>';
+}
+
+function pkHTML() {
+  const mols = selMols();
+  if (!mols.length) return '<p class="small">Aucune molécule sélectionnée.</p>';
+  const rows = [
+    ['Demi-vie', m => SC[m.id].t12[2], m => SC[m.id].t12[4], m => SC[m.id].t12[3]],
+    ['Métabolisme', m => RAW.PK[m.id].met, m => RAW.PK[m.id].src, () => ''],
+    ['Élimination', m => RAW.PK[m.id].el, m => RAW.PK[m.id].src, () => ''],
+    ['Particularités', m => RAW.PK[m.id].part, m => RAW.PK[m.id].src, () => '']];
+  const cell = (r, m) => esc(r[1](m)) + (r[3](m) ? '<span class="note">' + esc(r[3](m)) + '</span>' : '') + ' ' + srcTag(r[2](m));
+  if (state.mode === 'one' && mols.length === 1) {
+    const m = mols[0];
+    return '<div class="list">' + rows.map(r => '<div class="item"><h3>' + r[0] + '</h3>' + cell(r, m) + '</div>').join('') + '</div>';
+  }
+  return '<div class="wrap"><table><thead><tr><th></th>' + mols.map(m => '<th><span style="color:' + COL(m) + '">&#9632;</span> ' + esc(m.name) + '</th>').join('') + '</tr></thead><tbody>' +
+    rows.map(r => '<tr><th scope="row">' + r[0] + '</th>' + mols.map(m => '<td class="cell">' + cell(r, m) + '</td>').join('') + '</tr>').join('') +
+    '</tbody></table></div>';
+}
+
+function dosesHTML() {
+  const mols = selMols();
+  return '<div class="list">' + mols.map(m => { const d = RAW.DOSES.find(x => x[0] === m.id);
+    return '<div class="item"><h3><span style="color:' + COL(m) + '">&#9632;</span> ' + esc(m.name) + '</h3>' + esc(d[1]) + ' ' + srcTag(d[2]) + '</div>'; }).join('') + '</div>' +
+    '<p class="small">Aucune équivalence de dose entre bêta-bloquants n\u2019est présumée : les posologies ci-dessus ne sont pas convertibles entre elles.</p>';
+}
+
+function divergHTML() {
+  return '<div class="wrap"><table><thead><tr><th>Point</th><th>Valeurs selon les sources</th><th>Traitement retenu</th><th>Sources</th></tr></thead><tbody>' +
+    RAW.DIVERG.map(d => '<tr><th scope="row">' + esc(d[0]) + '</th><td class="cell" style="min-width:240px">' + esc(d[1]) + '</td><td class="cell" style="min-width:220px">' + esc(d[2]) + '</td><td class="cell" style="min-width:90px">' + srcTag(d[3]) + '</td></tr>').join('') + '</tbody></table></div>';
+}
+
+function hypHTML() {
+  return '<h2 id="hyp">Hypothèse</h2><div class="hyp"><ul class="plain">' + RAW.HYPOTHESES.map(h => '<li>' + esc(h) + '</li>').join('') + '</ul></div>';
+}
+
+function citedIds() {
+  const out = new Set();
+  const grab = t => (String(t).match(/S\d+/g) || []).forEach(x => out.add(x));
+  const P = PAGE.sections;
+  if (P.includes('matrix')) { Object.values(RAW.MX).forEach(r => Object.values(r).forEach(c => c[2].forEach(x => out.add(x)))); RAW.ROWS.forEach(r => r[3].forEach(x => out.add(x))); }
+  if (P.includes('alerts')) RAW.ALERTS.forEach(a => a[2].forEach(x => out.add(x)));
+  if (P.includes('selection')) grab('S11 S1 S14');
+  PAGE.radars.forEach(g => M.forEach(m => g.keys.forEach(k => SC[m.id][k][4].forEach(x => out.add(x)))));
+  if (P.includes('pk')) { M.forEach(m => RAW.PK[m.id].src.forEach(x => out.add(x))); M.forEach(m => SC[m.id].t12[4].forEach(x => out.add(x))); }
+  if (P.includes('doses')) RAW.DOSES.forEach(d => d[2].forEach(x => out.add(x)));
+  if (P.includes('diverg')) RAW.DIVERG.forEach(d => { d[3].forEach(x => out.add(x)); grab(d[1]); grab(d[2]); });
+  RAW.HYPOTHESES.forEach(grab);
+  RAW.ROWS.forEach(r => grab(r[2]));
+  PAGE.radars.forEach(g => g.keys.forEach(k => { grab(AX[k].rule); M.forEach(m => grab(SC[m.id][k][3])); }));
+  return Array.from(out).sort((a, b) => +a.slice(1) - +b.slice(1));
+}
+
+function sourcesHTML() {
+  return '<h2 id="sources">Sources</h2><ol class="src">' + citedIds().map(id => '<li id="src-' + id + '"><b>' + id + '</b>' + esc(SRC[id]) + '</li>').join('') + '</ol>';
+}
+
+function render() {
+  const mols = selMols();
+  const parts = [];
+  PAGE.sections.forEach(s => {
+    if (s === 'matrix') parts.push('<h2>Indications par molécule</h2>' + matrixHTML());
+    else if (s === 'alerts') parts.push('<h2>Alertes en vigueur</h2>' + alertsHTML());
+    else if (s === 'selection') parts.push(selectionHTML());
+    else if (s === 'radars') parts.push('<h2>' + esc(PAGE.radarTitle) + '</h2><div class="radars' + (PAGE.radars.length > 1 ? ' two' : '') + '">' + PAGE.radars.map(g => radarCard(g.id, g.keys, g.title)).join('') + '</div>');
+    else if (s === 'pk') parts.push('<h2>Pharmacocinétique</h2>' + pkHTML());
+    else if (s === 'doses') parts.push('<h2>Posologies usuelles</h2>' + dosesHTML());
+    else if (s === 'diverg') parts.push('<h2>Divergences entre sources</h2>' + divergHTML());
+  });
+  $('#viz').innerHTML = parts.join('');
+  $('#ctrl').innerHTML = selectorHTML();
+}
+
+function init() {
+  document.title = PAGE.title;
+  $('#app').innerHTML = '<h1>' + esc(PAGE.title) + '</h1><p class="lead">' + esc(PAGE.lead) + '</p><div id="ctrl"></div><div id="viz"></div><div id="tail"></div>';
+  $('#tail').innerHTML = hypHTML() + sourcesHTML();
+  render();
+  document.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    const key = b.dataset.mol ? '[data-mol="' + b.dataset.mol + '"]' : (b.dataset.mode ? '[data-mode="' + b.dataset.mode + '"]' : (b.id ? '#' + b.id : null));
+    setTimeout(() => { const n = key && document.querySelector('#ctrl ' + key); if (n) n.focus(); }, 0);
+    if (b.dataset.mode) {
+      state.mode = b.dataset.mode;
+      if (state.mode === 'one') state.sel = [state.sel[0] || M[0].id];
+      render();
+    } else if (b.id === 'btn-all') { state.mode = 'multi'; state.sel = M.map(m => m.id); render(); }
+    else if (b.dataset.mol) {
+      const id = b.dataset.mol;
+      if (state.mode === 'one') state.sel = [id];
+      else state.sel = state.sel.includes(id) ? state.sel.filter(x => x !== id) : M.map(m => m.id).filter(x => state.sel.includes(x) || x === id);
+      render();
+    }
+  });
+}
+
+window.__selfTest = function () {
+  const r = { errors: [] };
+  const err = m => r.errors.push(m);
+  M.forEach(m => {
+    Object.keys(AX).forEach(k => {
+      const s = SC[m.id][k]; if (!s) return err('score manquant ' + m.id + '/' + k);
+      if (s[0] !== null && !(s[0] >= 0 && s[0] <= 4)) err('score hors échelle ' + m.id + '/' + k);
+      s[4].forEach(x => { if (!SRC[x]) err('source inconnue ' + x + ' (' + m.id + '/' + k + ')'); });
+    });
+    RAW.ROWS.forEach(row => { const c = RAW.MX[row[0]] && RAW.MX[row[0]][m.id]; if (!c) err('matrice incomplète ' + row[0] + '/' + m.id); else c[2].forEach(x => { if (!SRC[x]) err('source inconnue ' + x); }); });
+    if (!RAW.PK[m.id]) err('PK manquant ' + m.id);
+    if (!RAW.DOSES.find(d => d[0] === m.id)) err('dose manquante ' + m.id);
+  });
+  const body = document.getElementById('viz').textContent + ' ' + document.querySelector('.lead').textContent + ' ' + document.querySelector('.hyp').textContent;
+  const shown = new Set((body.match(/S\d{1,2}(?!\d)/g) || []));
+  const listed = new Set(Array.from(document.querySelectorAll('ol.src li b')).map(b => b.textContent));
+  shown.forEach(x => { if (!listed.has(x)) err('référence citée absente de Sources : ' + x); });
+  listed.forEach(x => { if (!shown.has(x)) err('source listée jamais citée : ' + x); });
+  r.polygons = document.querySelectorAll('svg polygon[data-poly]').length;
+  r.svgs = document.querySelectorAll('svg[role="img"]').length;
+  r.cited = Array.from(shown).sort(); r.listed = Array.from(listed).sort();
+  r.overflowX = document.documentElement.scrollWidth > window.innerWidth + 1;
+  return r;
+};
+init();
+</script>
+</body>
+</html>
